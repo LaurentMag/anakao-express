@@ -25,6 +25,7 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="stylesheets/main.css">
+  <script defer src="js/tarif.js"></script>
 
   <meta name="theme-color" content="#fafafa">
 
@@ -62,183 +63,191 @@
     <!--======================= PRICE CARD =======================-->
     <section class="tarif-wrapper">
       <section class="tarif-container">
-        <h2>Promo covid / prix</h2>
-        <div class="tarif__card-container-wrapper">
-          <div class="tarif__card-container">
-            <ul class="price__card">
-              <li>transfert aller / retour</li>
-              <li class="price-btn">100 000 Ar</li>
-            </ul>
-            <ul class="price__card">
-              <li>aller simple</li>
-              <li class="price-btn">50 000 Ar</li>
-            </ul>
-          </div>
-          <div class="tarif__card-container" id="card-bright">
-            <ul class="price__card">
-              <li>transfert aller / retour</li>
-              <li class="price-btn">120 000 Ar</li>
-            </ul>
-            <ul class="price__card">
-              <li>aller simple</li>
-              <li class="price-btn">60 000 Ar</li>
-            </ul>
-          </div>
-        </div>
-        <div class="tarif__card-container" >
-          <div class="price__card">
-            <p>Transfert gratuit pour les enfants de moins de 3 ans, demi-tarif pour
-            les enfants de moins de 10 ans. <br>
-            Location de vedette, ou autres trajets "lien vers trajets" <b>Nous
-            contacter</b> <br>
-            Les prix est pour tous les hôtels d’Anakao</p>
-          </div>
-        </div>
-      </section>
-      <!--======================= CONTACT & LOCATION =======================-->
-      <section class="contact-container-wrapper">
-        <div class="contact-title">
-          <h2>Contact et Location</h2>
-          <!--<p>transfert à Anakao en bateau</p>-->
-        </div>
-        <article class="contact">
-          <div class="contact-container">
-            <div class="contact-card">
-              <p>Responsable bureau: ODILIA</p>
-              <p>
-                <i class="fas fa-phone-alt"></i>034 600 72 61 <span>OU</span> 034
-                600 72 62
-              </p>
+        <h2>Transferts journaliers et Tarifs</h2>
+        <article class="tarif__section-a">
+          <div class="tarif-container-grid">
+            <h3 id="promo">Covid Promo</h3>
+            <div class="tarif__card-container-wrapper">
+              <div class="tarif__card-container">
+                <ul class="price__card">
+                  <li>transfert aller / retour</li>
+                  <li class="price-btn">100 000 Ar</li>
+                </ul>
+                <ul class="price__card">
+                  <li>aller simple</li>
+                  <li class="price-btn">50 000 Ar</li>
+                </ul>
+              </div>
+              <div class="tarif__card-container" id="card-bright">
+                <ul class="price__card">
+                  <li>transfert aller / retour</li>
+                  <li class="price-btn">120 000 Ar</li>
+                </ul>
+                <ul class="price__card">
+                  <li>aller simple</li>
+                  <li class="price-btn">60 000 Ar</li>
+                </ul>
+              </div>
             </div>
-            <div class="contact-card">
-              <p>Employé bureau: JEAN-FREDO</p>
-              <p><i class="fas fa-phone-alt"></i>034 21 673 20</p>
+            <div class="tarif__card-container" id="text" >
+              <div class="price__card">
+                <p>Transfert gratuit pour les enfants de moins de 3 ans, demi-tarif pour
+                  les enfants de moins de 10 ans. <br>
+                  Location de vedette, ou autres trajets "lien vers trajets" <span class="contact-scroll">Nous
+                    contacter</span> <br>
+                    Les prix est pour tous les hôtels d’Anakao
+                  </p>
+              </div>
             </div>
-            <div class="contact-card">
-              <p>
-                Pour un partenariat agence, contacter le Gérant: PATRICE WOILLE
-              </p>
-              <p><i class="fas fa-phone-alt"></i>034 45 488 91</p>
-            </div>
-          </div>
-          <div class="location-container">
-            <p id="location-email">
-              <i class="fas fa-envelope"></i><span>E-mail:</span
-              ><a href="mailto:transfert@anakaoexpress.com">
-                transfert@anakaoexpress.com</a
-              >
-            </p>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> <span>Adress</span>: Bureau
-              ANAKAO EXPRESS, Embarcadère Mahavatse, TULEAR 601 MADAGASCAR
-            </p>
           </div>
         </article>
       </section>
-      <!--======================= FORM =======================-->
-      <section class="form-container">
-        <h2>Demande de réservation</h2>
-        <form action="/" method="GET">
-          <!-- FIRST PART OF FORM -->
-          <div class="form-a">
-            <p>
-              <label for="name">Votre nom (requis)</label>
-              <input type="text" name="name" placeholder="requis" required>
-            </p>
-            <p>
-              <label for="email">Votre email (requis)</label>
-              <input type="email" name="email" placeholder="requis" required>
-            </p>
+          
+          <!--======================= CONTACT & LOCATION =======================-->
+      <div class="grid">
+        <section class="contact-container-wrapper">
+          <div class="contact-title">
+            <h2>Contact et Location</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla at unde obcaecati eligendi placeat ipsa voluptatem! Soluta quo illo saepe?</p>
           </div>
-          <div class="form-a">
-            <p>
-              <label for="date">Date de départ (requis)</label>
-              <input type="date">
-            </p>
-            <p>
-              <label for="date">Date de retour (requis)</label>
-              <input type="date">
-            </p>
-          </div>
-          <p>
-            <label for="passagers">Nombre de passagers (requis)</label>
-            <select name="passagers" id="passagers">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10+">10+</option>
-            </select>
-          </p>
-          <h4 class="form-text">La réservation ne sera pas acceptée dans le cas ou la date de départ ainsi que le nombre de passagers ne sont pas définis.</h4>
-          <p>
-            <label for="message" class="message-title">Si vous souhaitez la navette aller/retour de l'aéroport de Tuléar, merci de préciser les dates et les horaires d'arrivée et de départ de votre avion:</label>
-            <textarea name="navette" id="navette" cols="30" rows="10"></textarea>
-          </p>
-          <!-- SECOND PART OF FORM -->
-          <p class="form__hotel">
-            Veuillez indiquer votre hôtel à Anakao:
-            <div class="form__hotel-list">
-              <div class="form__hotel-radio">
-                <input type="radio" name="hotel" id="Longo Vezo" value="Longo Vezo">
-                <label for="Longo Vezo">Longo Vezo</label>
+          <article class="contact">
+            <div class="contact-container">
+              <div class="contact-card">
+                <p>Responsable bureau: ODILIA</p>
+                <p class="contact-number">
+                  <i class="fas fa-phone-alt"></i>034 600 72 61 <span>OU</span> 034
+                  600 72 62
+                </p>
               </div>
-              <div class="form__hotel-radio">
-                <input type="radio" name="hotel" id="Lalandaka" value="Lalandaka">
-                <label for="Lalandaka">Lalandaka</label>
+              <div class="contact-card">
+                <p>Employé bureau: JEAN-FREDO</p>
+                <p class="contact-number"><i class="fas fa-phone-alt"></i>034 21 673 20</p>
               </div>
-              <div class="form__hotel-radio">
-                <input type="radio" name="hotel" id="Prince Anakao" value="Prince Anakao">
-                <label for="Prince Anakao">Prince Anakao</label>
-              </div>
-              <div class="form__hotel-radio">
-                <input type="radio" name="hotel" id="Atlantis" value="Atlantis">
-                <label for="Atlantis">Atlantis</label>
-              </div>
-              <div class="form__hotel-radio">
-                <input type="radio" name="hotel" id="Safari Vezo" value="Safari Vezo">
-                <label for="Safari Vezo">Safari Vezo</label>
-              </div>
-              <div class="form__hotel-radio">
-                <input type="radio" name="hotel" id="Chez Emile" value="Chez Emile">
-                <label for="Chez Emile">Chez Emile</label>
-              </div>
-              <div class="form__hotel-radio">
-                <input type="radio" name="hotel" id="Mada Surf Lodge" value="Mada Surf Lodge">
-                <label for="Mada Surf Lodge">Mada Surf Lodge</label>
-              </div>
-              <div class="form__hotel-radio">
-                <input type="radio" name="hotel" id="Peter Pan" value="Peter Pan">
-                <label for="Peter Pan">Peter Pan</label>
-              </div>
-              <div class="form__hotel-radio">
-                <input type="radio" name="hotel" id="Océan Lodge" value="Océan Lodge">
-                <label for="Océan Lodge">Océan Lodge</label>
-              </div>
-              <div class="form__hotel-radio">
-                <input type="radio" name="hotel" id="Chez Diego - L'altra faccia della Luna" value="Chez Diego - L'altra faccia della Luna">
-                <label for="Chez Diego - L'altra faccia della Luna">Chez Diego - L'altra faccia della Luna</label>
+              <div class="contact-card">
+                <p>
+                  Pour un partenariat agence,<br> contacter le Gérant: PATRICE WOILLE
+                </p>
+                <p class="contact-number"><i class="fas fa-phone-alt"></i>034 45 488 91</p>
               </div>
             </div>
-          </p>
-          <p>
-            <label for="message">Message ou questions</label>
-            <textarea name="message" id="" cols="30" rows="10"></textarea>
-          </p>
-          <div class="form-button">
+            <div class="location-container">
+              <p id="location-email">
+                <i class="fas fa-envelope"></i><span>E-mail:</span
+                ><a href="mailto:transfert@anakaoexpress.com">
+                  transfert@anakaoexpress.com</a
+                >
+              </p>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> <span>Adress</span>: Bureau
+                ANAKAO EXPRESS, Embarcadère Mahavatse, TULEAR 601 MADAGASCAR
+              </p>
+            </div>
+          </article>
+        </section>
+        <!--======================= FORM =======================-->
+        <section class="form-container">
+          <h2>Demande de réservation</h2>
+          <form action="/" method="GET">
+            <!-- FIRST PART OF FORM -->
+            <div class="form-a">
+              <p>
+                <label for="name">Votre nom (requis)</label>
+                <input type="text" name="name" placeholder="requis" required>
+              </p>
+              <p>
+                <label for="email">Votre email (requis)</label>
+                <input type="email" name="email" placeholder="requis" required>
+              </p>
+            </div>
+            <div class="form-a">
+              <p>
+                <label for="date">Date de départ (requis)</label>
+                <input type="date">
+              </p>
+              <p>
+                <label for="date">Date de retour (requis)</label>
+                <input type="date">
+              </p>
+            </div>
+            <p>
+              <label for="passagers">Nombre de passagers (requis)</label>
+              <select name="passagers" id="passagers">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10+">10+</option>
+              </select>
+            </p>
+            <p>
+              <label for="message" class="message-title">Si vous souhaitez la navette aller/retour de l'aéroport de Tuléar, merci de préciser les dates et les horaires d'arrivée et de départ de votre avion:</label>
+              <textarea name="navette" id="navette" cols="30" rows="10"></textarea>
+            </p>
+            <!-- SECOND PART OF FORM -->
+            <p class="form__hotel">
+              Veuillez indiquer votre hôtel à Anakao:
+              <div class="form__hotel-list">
+                <div class="form__hotel-radio">
+                  <input type="radio" name="hotel" id="Longo Vezo" value="Longo Vezo">
+                  <label for="Longo Vezo">Longo Vezo</label>
+                </div>
+                <div class="form__hotel-radio">
+                  <input type="radio" name="hotel" id="Lalandaka" value="Lalandaka">
+                  <label for="Lalandaka">Lalandaka</label>
+                </div>
+                <div class="form__hotel-radio">
+                  <input type="radio" name="hotel" id="Prince Anakao" value="Prince Anakao">
+                  <label for="Prince Anakao">Prince Anakao</label>
+                </div>
+                <div class="form__hotel-radio">
+                  <input type="radio" name="hotel" id="Atlantis" value="Atlantis">
+                  <label for="Atlantis">Atlantis</label>
+                </div>
+                <div class="form__hotel-radio">
+                  <input type="radio" name="hotel" id="Safari Vezo" value="Safari Vezo">
+                  <label for="Safari Vezo">Safari Vezo</label>
+                </div>
+                <div class="form__hotel-radio">
+                  <input type="radio" name="hotel" id="Chez Emile" value="Chez Emile">
+                  <label for="Chez Emile">Chez Emile</label>
+                </div>
+                <div class="form__hotel-radio">
+                  <input type="radio" name="hotel" id="Mada Surf Lodge" value="Mada Surf Lodge">
+                  <label for="Mada Surf Lodge">Mada Surf Lodge</label>
+                </div>
+                <div class="form__hotel-radio">
+                  <input type="radio" name="hotel" id="Peter Pan" value="Peter Pan">
+                  <label for="Peter Pan">Peter Pan</label>
+                </div>
+                <div class="form__hotel-radio">
+                  <input type="radio" name="hotel" id="Océan Lodge" value="Océan Lodge">
+                  <label for="Océan Lodge">Océan Lodge</label>
+                </div>
+                <div class="form__hotel-radio">
+                  <input type="radio" name="hotel" id="Chez Diego - L'altra faccia della Luna" value="Chez Diego - L'altra faccia della Luna">
+                  <label for="Chez Diego - L'altra faccia della Luna">Chez Diego - L'altra faccia della Luna</label>
+                </div>
+              </div>
+            </p>
+            <p>
+              <label for="message">Message ou questions</label>
+              <textarea name="message" id="" cols="30" rows="10"></textarea>
+            </p>
+            <div class="form-button">
               <button type="submit">Envoyer</button>
-          </div>
-        </form>
-      </section>
+            </div>
+          </form>
+        </section>
+      </div>
     </section>
-
-    <!--================ FOOTER ================-->
-    <footer>
+      
+      <!--================ FOOTER ================-->
+      <footer>
       <ul class="adress">
         <li>Anakao Express</li>
         <li>137 Avenue du président Liautaye<br>Mahavatse Madagascar</li>
@@ -261,7 +270,7 @@
         <li><a href="https://www.facebook.com/anakaoexpress"><figure><img src="img/fbn.svg" alt="logo de facebook"></figure></a></li>
       </ul>
     </footer>
-  
+
   </body>
 </html>
 

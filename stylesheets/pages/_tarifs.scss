@@ -1,138 +1,192 @@
 /* TARIFS & RESERVATION */
 .tarif-wrapper {
-  /* font size only for tarif page (Why not on base.scss?)*/
-  font-size: 1.1rem;
-  font-family: $font-p;
-  /* gave margin on the top for now */
-  margin: 5rem $margin-article;
+  font-size: 1rem;
+  font-family: $font-titre-montserrat;
   h2 {
+    margin: $margin-article * 3 $margin-p/2 $margin-p $margin-p/2;
+    text-align: center;
     font-family: $font-titre-montserrat;
-    margin-bottom: $margin-navbar-top-down;
+    font-weight: 900;
+    font-size: $font-size-h2;
+  }
+  h3 {
+    font-family: $font-titre-montserrat;
+  }
+}
+.tarif-container {
+  h2 {
+    margin-top: $margin-article * 4;
+  }
+  h3 {
+    color: #eaeaea;
+    margin-bottom: $margin-p/2;
+  }
+  .tarif__section-a {
+    background: $color-dark-drey;
+    padding: $margin-article $margin-p;
+    .tarif__card-container-wrapper {
+      border-radius: 10px;
+    }
+    #card-bright {
+      background: #eaeaea;
+    }
+  }
+  .tarif-container-grid {
+    margin: $margin-p $margin-article;
   }
 }
 .tarif__card-container {
-  background: $color-dark-drey;
-  margin-bottom: $margin-article;
-  padding: $margin-article/2;
+  background: #eaeaea;
+  color: #000;
+  margin-bottom: $margin-p;
+  padding: $margin-p/2 $margin-p;
   border-radius: 5px;
   border-style: none;
   .price__card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: $margin-p + 0.2;
     margin: $margin-p 0;
-    background: #fff;
+    background: $color-dark-drey;
+    color: #fff;
     border-radius: 5px;
     border-style: none;
-    .price-btn {
-      background: $color-dark-drey;
-      color: #fff;
-      padding: 0.5rem;
-      border-radius: 5px;
-      border-style: none;
-    }
-  }
-}
-#card-bright {
-  background: #eaeaea;
-}
-
-.contact-container-wrapper {
-  margin: $margin-article * 2 0;
-  .contact {
-    &-card {
-      margin: $margin-p 0;
-    }
-  }
-  .location-container {
-    p {
-      margin: $margin-p 0;
-    }
-    span {
-      font-weight: bolder;
-    }
-    #location-email:hover {
-      transition: all 0.1s ease-in;
+    .contact-scroll {
+      font-weight: 600;
       text-decoration: underline;
-      opacity: 0.6;
-    }
-  }
-  p {
-    i {
-      padding-right: $margin-p/2;
-    }
-  }
-}
-.form-container {
-  p {
-    margin: $margin-article 0;
-    textarea {
-      width: 100%;
-    }
-  }
-  .form-text {
-    color: $font-color-small-text;
-    font-weight: 300;
-  }
-  .form__hotel {
-    margin: 0;
-    &-list {
-      display: flex;
-      width: 100%;
-      flex-wrap: wrap;
-      .form__hotel-radio {
-        padding: 0.5rem;
-      }
-    }
-  }
-  .form-button {
-    width: 100%;
-    text-align: center;
-    button {
-      padding: $margin-navbar-top-down + 0.1 $margin-p + 0.1;
-      color: #fff;
-      background: $color-dark-drey;
-      border-style: none;
-      border-radius: 5px;
       &:hover {
-        opacity: 0.6;
-        transition: all 0.2s ease-in;
         cursor: pointer;
       }
     }
+    .price-btn {
+      background: #eaeaea;
+      color: #000;
+      padding: $margin-p/2 $margin-p;
+      border-radius: 5px;
+      border-style: none;
+    }
+  }
+}
+.grid {
+  margin: $margin-p $margin-article;
+  .contact-container-wrapper {
+    .contact {
+      &-card {
+        margin: $margin-p 0;
+      }
+      .contact-card {
+        .contact-number {
+          font-weight: 500;
+          span {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .location-container {
+      p {
+        margin: $margin-p 0;
+        span {
+          font-weight: 600;
+        }
+      }
+      #location-email:hover {
+        text-decoration: underline;
+      }
+    }
+    p {
+      i {
+        padding-right: $margin-p/2;
+      }
+    }
+  }
+  .form-container {
+    p {
+      margin: $margin-p 0;
+      textarea {
+        width: 100%;
+      }
+      label {
+        font-weight: 600;
+      }
+    }
+    .form-text {
+      color: $font-color-small-text;
+      font-weight: 300;
+      font-size: 1rem;
+    }
+    .form__hotel {
+      margin: 0;
+      font-weight: 600;
+      &-list {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .form__hotel-radio {
+          padding: 0.5rem;
+        }
+      }
+    }
+    .form-button {
+      width: 100%;
+      text-align: center;
+      button {
+        padding: $margin-p $margin-p * 2;
+        margin-bottom: $margin-article;
+        color: #fff;
+        background: $color-dark-drey;
+        width: 100%;
+        border-style: none;
+        border-radius: 5px;
+        &:hover {
+          opacity: 0.6;
+          transition: all 0.2s ease-in;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
 
-@media screen and (min-width: 848px) {
+@media screen and (min-width: 700px) {
+  .grid,
+  .tarif-container-grid {
+    margin: 5rem $margin-article * 3;
+  }
+}
+
+@media screen and (min-width: 971px) {
+  .grid {
+    margin: 5rem $margin-article * 5;
+    display: grid;
+    grid-template-columns: 2fr minmax(auto, 50%);
+    grid-gap: $margin-article * 3;
+  }
+  .tarif-container-grid {
+    margin: 5rem $margin-article * 3;
+  }
   .tarif__card-container-wrapper {
     display: grid;
     grid-template-columns: 1fr minmax(50%, auto);
     grid-gap: 1rem;
     align-items: center;
   }
-  .contact {
-    display: grid;
-    grid-template-columns: 2fr minmax(auto, 50%);
-    grid-gap: 1rem;
-    .location-container {
-      p {
-        margin: $margin-p 0;
+  .contact-container-wrapper {
+    .contact {
+      .location-container {
+        p {
+          margin: $margin-p 0;
+        }
       }
     }
   }
   .form-a {
     p {
-      display: inline-block;
       margin: $margin-p 0;
       input {
         margin: 0 $margin-navbar-top-down;
       }
     }
-  }
-}
-@media screen and (min-width: 1000px) {
-  .tarif-wrapper {
-    margin: 5rem;
   }
 }
