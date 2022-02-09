@@ -1,0 +1,239 @@
+// PARALLAX ========================================================================================
+// =================================================================================================
+.trajets__body {
+  overflow: hidden;
+  color: black;
+}
+
+.trajets__parallax__container {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 10px;
+
+  .trajets__parallax__group {
+    position: relative;
+    transform-style: preserve-3d;
+    width: 100vw;
+    z-index: -1;
+  }
+}
+.trajets__parallax__group::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/trajets/temp_1-nosy-be-madagascar-timbuktu-travel-2.avif");
+  background-size: cover;
+  background-position: 50% 40%;
+  transform: translateZ(-7px) scale(1.8);
+  min-height: 100vh;
+}
+
+// Side text ----------------------------------------------------------------
+
+.trajets__presentation-txt {
+  position: relative;
+  @include flex-modulable(column, center, null, 5rem);
+  top: 0;
+  padding: 13% 3rem 9%;
+  max-width: 25rem;
+
+  color: white;
+  background-color: rgba(40, 39, 43, 0.61);
+
+  h1 {
+    font-size: 4em;
+    text-shadow: $shadow-box-text;
+    margin-inline: 2rem 0;
+  }
+  p {
+    flex-basis: 18em;
+    font-family: $font-titre-montserrat;
+    margin-inline: 1rem 0;
+  }
+  a {
+    align-self: center;
+    font-family: $font-titre-montserrat;
+    font-size: 1.5em;
+    padding: 0.8rem;
+    border: 1px solid white;
+    box-shadow: $shadow-box-text;
+    // display: none;
+  }
+}
+
+// LES TRAJETS ============================================================================
+// ========================================================================================
+
+.trajets {
+  padding: 3% 0 4%;
+  color: white;
+  background-color: rgb(89, 89, 92);
+  position: relative;
+}
+
+/* ----------------------- */
+.trajets__header {
+  @include flex-modulable(column, null, center, 1rem);
+  margin-bottom: 3rem;
+
+  h1 {
+    position: relative;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  h1:after {
+    position: absolute;
+    content: "";
+    inset: 130% auto auto 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+
+    height: 3px;
+    width: 30%;
+  }
+  p {
+    font-size: 1.5em;
+    margin-bottom: 2rem;
+  }
+  strong {
+    color: orange;
+    font-size: 1.2em;
+  }
+}
+
+/*  GRID ----------------------- */
+.trajets__grid-container {
+  // background-color: rgb(255, 255, 255);
+  margin-inline: 20% 0;
+
+  .trajets__grid {
+    @include grid-column-repeat(1, 100%, 1fr, 15%);
+  }
+}
+
+/*  MAP ----------------------- */
+.trajets__map-fig {
+  position: relative;
+  background-color: rgb(203, 204, 218);
+img {
+aspect-ratio: 1 / 0.63;
+}
+}
+
+/*  BUTTON POSITION ----------------------- */
+.button0-position {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+}
+
+.button1-position {
+  position: absolute;
+  top: 49%;
+  left: 57%;
+}
+
+.button2-position {
+  position: absolute;
+  top: 62.5%;
+  left: 48.5%;
+}
+
+/* ARTICLE PHOTO & TXT ----------------------- */
+.trajets__environement-article {
+  position: absolute;
+  display: grid;
+  background-color: rgb(89, 89, 92);
+  border-radius: 0.5rem;
+
+  transition: all 0.1s;
+
+  max-width: 25%;
+  top: 34%;
+  left: 7%;
+
+  > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  /* ----------- */
+  .environement-article-text-container {
+    align-self: end;
+    background-color: rgba(0, 0, 0, 0.288);
+    margin-bottom: 5%;
+    max-width: 90%;
+  }
+
+  h2 {
+    padding: 1rem 3rem;
+  }
+  p {
+    padding: 0 2rem 1rem;
+  }
+  figure {
+    img {
+      box-shadow: $shadow-box-text;
+      aspect-ratio: 1 / 1.2;
+    }
+  }
+}
+
+
+/* FOR JS */
+.trajet__principal-fade {
+  .environement-article-text-container {
+    opacity: 0.1;
+  }
+  h2 {
+    opacity: 0.1;
+  }
+  p {
+    opacity: 0.1;
+  }
+  figure {
+    img {
+      opacity: 0.1;
+    }
+  }
+}
+
+// MEDIA ============================================================================
+// ========================================================================================
+
+$media-trajet: 810px;
+
+@media only screen and (max-width: $media-trajet) {
+  .trajets__presentation-txt {
+    background-color: rgba(0, 0, 0, 0.384);
+    max-width: 100vw;
+    align-items: center;
+    padding: 35% 20% 0;
+    height: min;
+
+    h1 {
+      margin-inline: 0;
+      text-align: center;
+    }
+    p {
+      margin-inline: 0;
+    }
+    a {
+      visibility: hidden;
+    }
+  }
+}
+
+// ======================================
+// ======================================
+
+.temp__text-fill {
+  background-color: rgb(216, 214, 208);
+  color: black;
+  padding: 5% 25%;
+
+  .para_p {
+    padding-bottom: 3rem;
+  }
+}

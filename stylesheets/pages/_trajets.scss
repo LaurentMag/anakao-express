@@ -16,32 +16,30 @@
     transform-style: preserve-3d;
     width: 100vw;
     z-index: -1;
-    // padding: 25% 0 25%;
   }
 }
 .trajets__parallax__group::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../img/trajets/map-last-last.svg");
+  background-image: url("../img/trajets/temp_1-nosy-be-madagascar-timbuktu-travel-2.avif");
   background-size: cover;
   background-position: 50% 40%;
   transform: translateZ(-7px) scale(1.8);
   min-height: 100vh;
-  // max-height: 100vh;
 }
 
 // Side text ----------------------------------------------------------------
 
 .trajets__presentation-txt {
   position: relative;
-  top: 0;
   @include flex-modulable(column, center, null, 5rem);
-  max-width: 24rem;
-  padding: 10% 3rem 10%;
-  max-height: 95vh;
+  top: 0;
+  padding: 13% 3rem 9%;
+  max-width: 25rem;
+
   color: white;
-  background-color: rgba(40, 39, 43, 0.589);
+  background-color: rgba(40, 39, 43, 0.61);
 
   h1 {
     font-size: 4em;
@@ -60,120 +58,20 @@
     padding: 0.8rem;
     border: 1px solid white;
     box-shadow: $shadow-box-text;
+    // display: none;
   }
 }
 
 // LES TRAJETS ============================================================================
 // ========================================================================================
 
-.trajets__content {
+.trajets {
+  padding: 3% 0 4%;
   color: white;
   background-color: rgb(89, 89, 92);
-}
-
-// ==============================================
-// ==============================================
-.trajets__principal {
-  padding: 3% 0 4%;
-
-  .trajets__principal-header {
-    @include flex-modulable(column, null, center, 1rem);
-    margin-bottom: 3rem;
-
-    h1 {
-      position: relative;
-      font-size: 2.2rem;
-      margin-bottom: 2rem;
-    }
-    h1:after {
-      position: absolute;
-      content: "";
-      inset: 130% auto auto 50%;
-      transform: translate(-50%, -50%);
-
-      background-color: white;
-
-      height: 3px;
-      width: 30%;
-    }
-    p {
-      font-size: 1.5em;
-      margin-bottom: 2rem;
-    }
-    strong {
-      color: orange;
-      font-size: 1.2em;
-    }
-  }
-}
-
-// GRID----------------------------------------------------------------
-.trajets__principal-grid-container {
-  margin: 0 auto;
-  max-width: 70rem;
-
-  .trajets__principal-grid {
-    @include grid-column-repeat(2, 220px, 1fr, 10rem);
-  }
-}
-
-// ARTICLE PHOTO & TXT----------------------------------------------------------------
-.trajets__principal-environement-article {
-  align-self: center;
-  position: relative;
-  transition: opacity 0.15s;
-  opacity: 1;
-
-  h2 {
-    box-sizing: border-box;
-    padding: 1rem 3rem;
-  }
-  p {
-    box-sizing: border-box;
-    padding: 1rem;
-  }
-  figure {
-    img {
-      border-radius: 0.5rem;
-      aspect-ratio: 1 / 0.8;
-    }
-  }
-}
-
-.trajet__principal-fade {
-  opacity: 0.2;
-}
-
-// MAP----------------------------------------------------------------------
-.trajets__principal-map-fig {
-  img {
-    border-radius: 0.5rem;
-    aspect-ratio: 1 / 1.2;
-  }
-}
-
-.trajets__principal-map-fig {
   position: relative;
 }
 
-// Positions ----------------------------------
-.button0-position {
-  position: absolute;
-  top: 1%;
-  left: 18%;
-}
-
-.button1-position {
-  position: absolute;
-  top: 60%;
-  left: 55%;
-}
-
-.button2-position {
-  position: absolute;
-  top: 90%;
-  left: 12%;
-}
 
 // MEDIA ============================================================================
 // ========================================================================================

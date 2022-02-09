@@ -27,7 +27,7 @@ const pToChange = document.querySelectorAll(".js-trajets__p");
 let imgTrajetsArray = [
   "img/trajets/temp_isole-madagascar_d.jpg.image.1296.974.high.jpg",
   "img/trajets/temp_madagascar_d.jpg.image.1296.974.high.webp",
-  "img/trajets/temp_1-nosy-be-madagascar-timbuktu-travel-2.avif",
+  "img/trajets/temp_1-nosy-be-madagascar-timbuktu-travel-10.avif",
 ];
 
 let hTrajetsArray = ["Tulear", "St Augustin", "Anakao"];
@@ -56,13 +56,15 @@ function addAndRemoveEffect(clickedButton, buttonClassToSkip, classToAddAndRemov
 function fadeInAndOutChangeContent(fadeclass, eIndexNum, cIndexNum, classSelector) {
   let articleToFade = document.querySelector(classSelector);
   articleToFade.classList.add(fadeclass);
+  // articleToFade.style.opacity = 0.1;
 
   setTimeout(function () {
     imgToChange[eIndexNum].src = imgTrajetsArray[cIndexNum];
     hToChange[eIndexNum].innerHTML = hTrajetsArray[cIndexNum];
     pToChange[eIndexNum].innerHTML = pTrajetsArray[cIndexNum];
     articleToFade.classList.remove(fadeclass);
-  }, 150);
+    // articleToFade.style.opacity = 1;
+  }, 100);
 }
 
 // FUNCTION : MAIN ------------------------------------------------------------------
