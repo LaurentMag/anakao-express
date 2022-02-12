@@ -4,13 +4,11 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: "Open Sans", "Helvetica Neue Light", "Helvetica Neue",
-  "Helvetica", "Arial", sans-serif !default;
+$text-font-stack: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
-$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
-  "Monaco", monospace !default;
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
 
 /// Copy text color
 /// @type Color
@@ -49,7 +47,7 @@ $breakpoints: (
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
+$base-url: "/assets/" !default;
 
 //------------------------------------------------------------------------------------------------
 $font-navbar-cinzel: "Cinzel", serif;
@@ -60,14 +58,14 @@ $font-p: "Playfair Display", serif;
 $font-size-navbar: 1.5em;
 $font-size-h1: 3em;
 $font-size-h2: 2.1em;
-$font-size-p: 1.3em;
+$font-size-p: 1.4em;
 
 //------------------------------------------------
 $letter-spacing-navbar: 0.07em;
 $letter-spacing-h1: 0.05em;
 
 //------------------------------------------------
-$line-height-p: 1.6;
+$line-height-p: 1.9;
 
 //------------------------------------------------
 
@@ -79,20 +77,26 @@ $margin-p: 1rem;
 //------------------------------------------------
 $font-color-sidebar: #fdfedb;
 $font-color-small-text: #747474;
-$color-bg-articles:#222222;
+$color-bg-articles: #222222;
 $color-dark-drey: rgb(41, 41, 41);
 
 //------------------------------------------------
-$shadow-box-text: 2px 4px 15px rgba(61, 56, 56, 0.185),
-  -2px 0 15px rgba(61, 56, 56, 0.185);
+
+$shadow-color: rgba(61, 56, 56, 0.185);
+$shadow-color-larger: rgba(61, 56, 56, 0.192);
+$shadow-color-darker: rgba(107, 98, 98, 0.884);
+
+$shadow-box-text: 2px 4px 15px #{$shadow-color}, -2px 0 15px #{$shadow-color};
+$shadow-box-text-larger: 3px 4px 20px #{$shadow-color-larger}, -3px 0 20px #{$shadow-color-larger};
+$shadow-box-text-darker: 4px 4px 10px #{$shadow-color-darker}, -4px 0px 10px #{$shadow-color-darker};
 
 //------------------------------------------------
 // Buttons trajets
 $size-side: 1px;
-$size-padding: 0.5rem;
-$size-border-shadow: 14px;
+$size-padding: 0.4rem;
+$size-border-shadow: 15px;
 $color-background: rgb(0, 0, 0);
 $color-background-hover: peru;
-$color-border-box: rgba(151, 145, 140, 0.788);
+$color-border-box: rgba(151, 145, 140, 0.699);
 $color-transparent-border-box: rgba(0, 0, 0, 0);
 $transition-time: 0.4s;
