@@ -81,17 +81,17 @@ function funcPrincipalChange(paramFunc) {
     if (button0 && stop != 0) {
       stop = 0;
       addAndRemoveEffect(whichButton, "button0-position", "button-on-click");
-      fadeInAndOutChangeContent("trajet__principal-fade", 0, 0, ".js-principal-article");
+      fadeInAndOutChangeContent("trajet__article-fade", 0, 0, ".js-principal-article");
     }
     if (button1 && stop != 1) {
       stop = 1;
       addAndRemoveEffect(whichButton, "button1-position", "button-on-click");
-      fadeInAndOutChangeContent("trajet__principal-fade", 0, 1, ".js-principal-article");
+      fadeInAndOutChangeContent("trajet__article-fade", 0, 1, ".js-principal-article");
     }
     if (button2 && stop != 2) {
       stop = 2;
       addAndRemoveEffect(whichButton, "button2-position", "button-on-click");
-      fadeInAndOutChangeContent("trajet__principal-fade", 0, 2, ".js-principal-article");
+      fadeInAndOutChangeContent("trajet__article-fade", 0, 2, ".js-principal-article");
     }
   }
 }

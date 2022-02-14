@@ -5,6 +5,7 @@
 // BUTTONS TRAJETS ----------------------------------------------------------------
   .general__button {
     @include flex-modulable(null, center, center);
+
     width: $size-side;
     height: $size-side;
     padding: $size-padding;

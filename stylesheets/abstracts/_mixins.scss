@@ -70,14 +70,6 @@
 // ----------------------------------------------------------------------
 
 /* GRIDS */
-@mixin grid-column-repeat($repeatvalue, $min, $max, $column-gap: null, $row-gap: null) {
-  display: grid;
-  grid-template-columns: repeat($repeatvalue, minmax($min, $max));
-  column-gap: $column-gap;
-  row-gap: $row-gap;
-  @content;
-}
-
 @mixin grid-column($value, $column-gap: null, $row-gap: null) {
   display: grid;
   grid-template-columns: $value;
@@ -86,7 +78,6 @@
   @content;
 }
 
-
 /* FLEX */
 @mixin flex-modulable($direction: null, $justify: null, $align: null, $gap: 0) {
   display: flex;
@@ -94,6 +85,16 @@
   justify-content: $justify;
   align-items: $align;
   gap: $gap;
+}
+
+
+/* Depreciated */
+@mixin grid-column-repeat($repeatvalue, $min, $max, $column-gap: null, $row-gap: null) {
+  display: grid;
+  grid-template-columns: repeat($repeatvalue, minmax($min, $max));
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+  @content;
 }
 
 
