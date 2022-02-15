@@ -69,14 +69,13 @@
 // ========================================================================================
 // ========================================================================================
 
-$border-radius-trajet: .25rem;
-$multiplier-font-size-h2: 1.5;
-$multiplier-font-size-p: 1.05;
-$multiplier-font-size-span: 0.85;
+$border-radius-trajet: 0.25rem;
+$font-size-multiplier-h2: 1.5;
+$font-size-multiplier-p: 1.05;
+$font-size-multiplier-span: 0.85;
 
-$trajet-width-map: #{"min(90%, 540px)"};
-$trajet-width-around-article: #{"min(85%, 530px)"};
-
+$width-trajet-map: #{"min(90%, 540px)"};
+$width-trajet-around-article: #{"min(85%, 530px)"};
 
 .trajets__grid-container {
   margin-inline: auto;
@@ -93,28 +92,27 @@ $trajet-width-around-article: #{"min(85%, 530px)"};
 
   h2 {
     position: relative;
-    font-size: calc(#{$font-size-h2} * #{$multiplier-font-size-h2});
+    font-size: calc(#{$font-size-h2} * #{$font-size-multiplier-h2});
   }
   h2:after {
     position: absolute;
     content: "";
-    background-color: white;
+
     width: 150%;
     height: 3px;
     z-index: 1;
   }
 
   span {
-    font-size: calc(#{$font-size-p} * #{$multiplier-font-size-span});
+    font-size: calc(#{$font-size-p} * #{$font-size-multiplier-span});
   }
   strong {
     font-family: $font-titre-montserrat;
-    font-size: calc(#{$font-size-p} * #{$multiplier-font-size-p});
+    font-size: calc(#{$font-size-p} * #{$font-size-multiplier-p});
     font-weight: bold;
-    color:rgb(73, 64, 64);
   }
   p:nth-of-type(1) {
-    padding-top: .8rem;
+    padding-top: 0.8rem;
   }
   p:nth-of-type(2) {
     flex-basis: 12rem;
@@ -128,7 +126,7 @@ $trajet-width-around-article: #{"min(85%, 530px)"};
 .trajets__map-fig {
   position: relative;
 
-  width: $trajet-width-map;
+  width: $width-trajet-map;
   z-index: 2;
 
   img {
@@ -144,7 +142,7 @@ $trajet-width-around-article: #{"min(85%, 530px)"};
   display: grid;
   position: relative;
 
-  width: $trajet-width-around-article;
+  width: $width-trajet-around-article;
 
   border-radius: $border-radius-trajet;
   box-shadow: $shadow-box-text-larger;
@@ -158,7 +156,7 @@ $trajet-width-around-article: #{"min(85%, 530px)"};
   }
   figure {
     img {
-      aspect-ratio: 1.5 / 1;
+      aspect-ratio: 1.6 / 1;
       border-radius: $border-radius-trajet;
     }
   }
@@ -174,7 +172,7 @@ $trajet-width-around-article: #{"min(85%, 530px)"};
     align-self: end;
 
     padding: 0 2rem 1rem;
-    font-size: calc(#{$font-size-p} * $multiplier-font-size-p);
+    font-size: calc(#{$font-size-p} * $font-size-multiplier-p);
   }
 }
 
@@ -190,26 +188,41 @@ $trajet-width-around-article: #{"min(85%, 530px)"};
 
 $color-background-trajet-quoti: rgb(89, 89, 92);
 $color-background-trajet-quoti-articles: peru;
+$color-font-quoti: white;
+$color-font-strong-quoti: rgb(73, 64, 64);
+
+$color-background-trajet-nord: rgb(216, 214, 208);
+$color-background-trajet-nord-articles: gray;
+$color-font-nord: rgb(54, 49, 49);
+$color-font-strong-nord: rgb(224, 218, 218);
 
 
+
+/* TRAJET QUOTIDIEN_____________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
 .trajets__principal-section {
-  color: white;
+  color: $color-font-quoti;
   background-color: $color-background-trajet-quoti;
-  padding: 8rem 0 1rem;
+  padding: 8rem 0 0;
 }
 
-/*  TRAJETS DESCRIPTIF____________ */
+/* ------------------------ */
 .quotidien__presentation {
   padding: 60px 10px 60px 60px;
 
   background-color: $color-background-trajet-quoti-articles;
 
   h2:after {
+    background-color: $color-font-quoti;
     inset: 130% auto auto 0%;
+  }
+  strong {
+    color: $color-font-strong-quoti;
   }
 }
 
-/*  MAP____________________ */
+/* ------------------------ */
 .quotidien__map {
   background-color: $color-background-trajet-quoti-articles;
 }
@@ -236,20 +249,150 @@ $color-background-trajet-quoti-articles: peru;
 }
 /* ------------------------ */
 .quotidien__around {
-  top: -40%;
+  top: -36%;
   left: 9%;
 }
 
+/* NORD_________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+.trajets__nord-section {
+  color: $color-font-nord;
+  background-color: $color-background-trajet-nord;
+  padding-top: 8rem;
+}
+/* ------------------------ */
+.nord__presentation {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 
+  padding: 60px 60px 60px 10px;
+  background-color: $color-background-trajet-nord-articles;
+
+  h2:after {
+    inset: 130% auto auto -100%;
+    background-color: $color-font-nord;
+  }
+  strong {
+    color: $color-font-strong-nord;
+  }
+}
+/* ------------------------ */
+.nord__map {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  background-color: $color-background-trajet-nord-articles;
+}
+
+.nord__map-fig {
+  top: 10%;
+  left: 7%;
+}
+
+.button3-position {
+  position: absolute;
+  top: 3%;
+  left: 42%;
+}
+.button4-position {
+  position: absolute;
+  top: 52%;
+  left: 78%;
+}
+.button5-position {
+  position: absolute;
+  top: 77%;
+  left: 38%;
+}
+
+/* ------------------------ */
+.nord__around {
+  grid-column: 2 / 3;
+
+  top: -36%;
+  left: 6%;
+}
+
+/* SUD__________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+.trajets__sud-section {
+  color: $color-font-nord;
+  background-color: $color-background-trajet-nord;
+  padding-top: 2rem;
+}
+/* ------------------------ */
+.sud__presentation {
+  padding: 60px 10px 60px 60px;
+  background-color: $color-background-trajet-nord-articles;
+
+  h2:after {
+    inset: 130% auto auto 0%;
+    background-color: $color-font-nord;
+  }
+  strong {
+    color: $color-font-strong-nord;
+  }
+}
+/* ------------------------ */
+.sud__map {
+  background-color: $color-background-trajet-nord-articles;
+}
+
+.sud__map-fig {
+  top: 10%;
+  left: 7%;
+}
+
+.button6-position {
+  position: absolute;
+  top: 3%;
+  left: 42%;
+}
+.button7-position {
+  position: absolute;
+  top: 52%;
+  left: 78%;
+}
+.button8-position {
+  position: absolute;
+  top: 77%;
+  left: 38%;
+}
+.button9-position {
+  position: absolute;
+  top: 77%;
+  left: 55%;
+}
+
+/* ------------------------ */
+.sud__around {
+  top: -36%;
+  left: 9%;
+}
 
 // MEDIA GENERAL =====================================================================
 // ===================================================================================
 // ===================================================================================
 // ===================================================================================
 $media-trajet-sidetext: 810px;
-$media-trajet-principal-large: 1030px;
-$media-trajet-principal-medium: 700px;
-$media-trajet-principal-small: 460px;
+$media-large-trajet-principal: 1030px;
+$media-medium-trajet-principal: 700px;
+$media-small-trajet-principal: 460px;
+
+$padding-media-trajets-top: 7rem;
+$padding-media-large-trajets-bottom: 5rem;
+$padding-media-medium-trajets-bottom: 0;
+
+$padding-media-trajets-nord-top: 5rem;
+
+$width-media-large-trajet-map: #{"min(75%, 550px)"};
+$width-media-large-trajet-around: #{"min(65%, 450px)"};
+$width-media-medium-trajet-map: #{"min(90%, 400px)"};
+$width-media-medium-trajet-around: #{"min(85%, 390px)"};
+
+
 
 @media only screen and (max-width: $media-trajet-sidetext) {
   .trajets__global-presentation {
@@ -273,7 +416,7 @@ $media-trajet-principal-small: 460px;
 }
 /* _______________________________________________________________ */
 
-@media only screen and (max-width: $media-trajet-principal-large) {
+@media only screen and (max-width: $media-large-trajet-principal) {
   .trajets__grid-container {
     width: 63%;
   }
@@ -284,9 +427,10 @@ $media-trajet-principal-small: 460px;
   }
   /* ------------ */
   .trajets__presentation {
-    padding: 60px;
+    padding: 60px 60px 40px 60px;
 
     h2:after {
+      inset: 130% auto auto 0%;
       width: 100%;
     }
   }
@@ -295,12 +439,12 @@ $media-trajet-principal-small: 460px;
     height: max-content;
   }
   .trajets__map-fig {
-    width: #{"min(75%, 550px)"};
+    width: $width-media-large-trajet-map;
   }
   /* ------------ */
   .trajets__around-article {
     position: absolute;
-    width: #{"min(65%, 450px)"};
+    width: $width-media-large-trajet-around;
 
     figure {
       img {
@@ -310,43 +454,50 @@ $media-trajet-principal-small: 460px;
   }
 }
 
-@media only screen and (max-width: $media-trajet-principal-medium) {
+@media only screen and (max-width: $media-medium-trajet-principal) {
   .trajets__grid-container {
     width: #{"min(90%, 30rem)"};
   }
   .trajets__grid {
     @include grid-column(1fr);
   }
-     /* ------------ */
+  /* ------------ */
   .trajets__map-and-button {
-    border-bottom: 130px solid peru;
+    border-bottom: 130px solid $color-background-trajet-quoti-articles;
   }
 
   .trajets__map-fig {
-    width: #{"min(90%, 400px)"};
+    width: $width-media-medium-trajet-map;
   }
 
   .trajets__around-article {
     position: relative;
-    width: #{"min(85%, 390px)"};
+    width: $width-media-medium-trajet-around;
   }
 }
 
-
-@media only screen and (max-width: $media-trajet-principal-small) {
+@media only screen and (max-width: $media-small-trajet-principal) {
   .trajets__presentation {
     padding: 35px;
   }
 }
+// ===================================================================================
+// ===================================================================================
+// ===================================================================================
 
-/*  MEDIA SPECIFIC_____________________________________________________ */
+/*  TRAJET QUOTIDIEN_____________________________________________________ */
 /* ____________________________________________________________________ */
-@media only screen and (max-width: $media-trajet-principal-large) {
+/* ____________________________________________________________________ */
+@media only screen and (max-width: $media-large-trajet-principal) {
+  .trajets__principal-section {
+    padding: $padding-media-trajets-top 0 $padding-media-large-trajets-bottom;
+  }
+
   .quotidien__map {
-    border-bottom: 50px solid peru;
+    border-bottom: 50px solid $color-background-trajet-quoti-articles;
   }
   .quotidien__map-fig {
-    top: -7%;
+    top: 0;
     left: 46%;
   }
   /* ------------ */
@@ -357,12 +508,16 @@ $media-trajet-principal-small: 460px;
   }
 }
 
-@media only screen and (max-width: $media-trajet-principal-medium) {
+@media only screen and (max-width: $media-medium-trajet-principal) {
+  .trajets__principal-section {
+    padding: $padding-media-trajets-top 0 $padding-media-medium-trajets-bottom;
+  }
+
   .quotidien__map {
-    border-bottom: 130px solid peru;
+    border-bottom: 130px solid $color-background-trajet-quoti-articles;
   }
   .quotidien__map-fig {
-    top: 0%;
+    top: 0;
     left: 50%;
     transform: translate(-50%, 0%);
   }
@@ -374,17 +529,55 @@ $media-trajet-principal-small: 460px;
   }
 }
 
+/*  NORD______________________________________________________________ */
+/* ____________________________________________________________________ */
+/* ____________________________________________________________________ */
+@media only screen and (max-width: $media-large-trajet-principal) {
+  .trajets__nord-section {
+    padding: $padding-media-trajets-nord-top 0 0;
+  }
 
+  .nord__presentation {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  /* ------------ */
+  .nord__map {
+    border-bottom: 50px solid $color-background-trajet-nord-articles;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .nord__map-fig {
+    top: 0;
+    left: -22%;
+  }
+  /* ------------ */
+  .nord__around {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    top: 15%;
+    left: 57%;
+  }
+}
 
-// ======================================
-// ======================================
+@media only screen and (max-width: $media-medium-trajet-principal) {
+  .trajets__nord-section {
+    padding: $padding-media-trajets-top 0 0;
+    margin-bottom: -5rem;
+  }
 
-.temp__text-fill {
-  background-color: rgb(216, 214, 208);
-  color: black;
-  padding: 5% 25%;
-
-  .para_p {
-    padding-bottom: 3rem;
+  .nord__map {
+    border-bottom: 130px solid $color-background-trajet-nord-articles;
+  }
+  .nord__map-fig {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  .nord__around {
+    grid-row: 3 / 4;
+    top: -25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
 }
