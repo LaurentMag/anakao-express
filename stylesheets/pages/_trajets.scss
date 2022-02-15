@@ -377,9 +377,9 @@ $color-font-strong-nord: rgb(224, 218, 218);
 // ===================================================================================
 // ===================================================================================
 $media-trajet-sidetext: 810px;
-$media-large-trajet-principal: 1030px;
-$media-medium-trajet-principal: 700px;
-$media-small-trajet-principal: 460px;
+$media-large-trajet: 1030px;
+$media-medium-trajet: 700px;
+$media-small-trajet: 460px;
 
 $padding-media-trajets-top: 7rem;
 $padding-media-large-trajets-bottom: 5rem;
@@ -416,7 +416,7 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
 }
 /* _______________________________________________________________ */
 
-@media only screen and (max-width: $media-large-trajet-principal) {
+@media only screen and (max-width: $media-large-trajet) {
   .trajets__grid-container {
     width: 63%;
   }
@@ -454,7 +454,7 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
   }
 }
 
-@media only screen and (max-width: $media-medium-trajet-principal) {
+@media only screen and (max-width: $media-medium-trajet) {
   .trajets__grid-container {
     width: #{"min(90%, 30rem)"};
   }
@@ -476,7 +476,7 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
   }
 }
 
-@media only screen and (max-width: $media-small-trajet-principal) {
+@media only screen and (max-width: $media-small-trajet) {
   .trajets__presentation {
     padding: 35px;
   }
@@ -488,7 +488,7 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
 /*  TRAJET QUOTIDIEN_____________________________________________________ */
 /* ____________________________________________________________________ */
 /* ____________________________________________________________________ */
-@media only screen and (max-width: $media-large-trajet-principal) {
+@media only screen and (max-width: $media-large-trajet) {
   .trajets__principal-section {
     padding: $padding-media-trajets-top 0 $padding-media-large-trajets-bottom;
   }
@@ -508,7 +508,7 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
   }
 }
 
-@media only screen and (max-width: $media-medium-trajet-principal) {
+@media only screen and (max-width: $media-medium-trajet) {
   .trajets__principal-section {
     padding: $padding-media-trajets-top 0 $padding-media-medium-trajets-bottom;
   }
@@ -532,7 +532,7 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
 /*  NORD______________________________________________________________ */
 /* ____________________________________________________________________ */
 /* ____________________________________________________________________ */
-@media only screen and (max-width: $media-large-trajet-principal) {
+@media only screen and (max-width: $media-large-trajet) {
   .trajets__nord-section {
     padding: $padding-media-trajets-nord-top 0 0;
   }
@@ -560,7 +560,7 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
   }
 }
 
-@media only screen and (max-width: $media-medium-trajet-principal) {
+@media only screen and (max-width: $media-medium-trajet) {
   .trajets__nord-section {
     padding: $padding-media-trajets-top 0 0;
     margin-bottom: -5rem;
