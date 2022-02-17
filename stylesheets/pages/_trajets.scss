@@ -34,7 +34,7 @@
   position: relative;
   @include flex-modulable(column, center, null, 5rem);
   top: 0;
-  padding: 11% 3rem 10%;
+  padding: 11% 3rem 11%;
   max-width: 25rem;
 
   color: white;
@@ -61,12 +61,30 @@
   }
 }
 
-// LES TRAJETS ============================================================================
-// ========================================================================================
+$media-trajet-sidetext: 810px;
 
-// GENERAL SETTINGS =======================================================================
-// ========================================================================================
-// ========================================================================================
+@media only screen and (max-width: $media-trajet-sidetext) {
+  .trajets__global-presentation {
+    background-color: rgba(0, 0, 0, 0.384);
+    max-width: 100vw;
+    align-items: center;
+    padding: 35% 20% 0;
+    height: min;
+
+    h1 {
+      margin-inline: 0;
+      text-align: center;
+    }
+    p {
+      margin-inline: 0;
+    }
+    a {
+      visibility: hidden;
+    }
+  }
+}
+
+// LES TRAJETS ============================================================================
 // ========================================================================================
 
 $border-radius-trajet: 0.25rem;
@@ -76,6 +94,47 @@ $font-size-multiplier-span: 0.85;
 
 $width-trajet-map: #{"min(90%, 540px)"};
 $width-trajet-around-article: #{"min(85%, 530px)"};
+
+$color-background-trajet-quoti: rgb(89, 89, 92);
+$color-background-trajet-quoti-articles: peru;
+$color-font-quoti: white;
+$color-font-strong-quoti: rgb(73, 64, 64);
+
+$color-background-trajet-nord: rgb(216, 214, 208);
+$color-background-trajet-nord-articles: gray;
+$color-font-nord: rgb(54, 49, 49);
+$color-font-strong-nord: rgb(224, 218, 218);
+
+$padding-trajet-principal: 8rem 0 0;
+$padding-trajet-secondaire: 6rem 0 0;
+
+/* _______________________ */
+
+$media-large-trajet: 1030px;
+$media-medium-trajet: 700px;
+$media-small-trajet: 460px;
+
+$padding-media-trajets-top: 7rem;
+$padding-media-large-trajets-bottom: 5rem;
+$padding-media-medium-trajets-bottom: 0;
+
+$padding-media-trajets-nord-top: 5rem;
+$padding-media-trajets-sud-top: 0;
+
+$width-media-large-trajet-map: #{"min(75%, 550px)"};
+$width-media-large-trajet-around: #{"min(65%, 450px)"};
+$width-media-medium-trajet-map: #{"min(90%, 400px)"};
+$width-media-medium-trajet-around: #{"min(85%, 390px)"};
+
+
+// GENERAL SETTINGS =======================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
 
 .trajets__grid-container {
   margin-inline: auto;
@@ -181,239 +240,9 @@ $width-trajet-around-article: #{"min(85%, 530px)"};
   opacity: 0.2;
 }
 
-// ========================================================================================
-// ========================================================================================
-// ========================================================================================
-// ========================================================================================
-
-$color-background-trajet-quoti: rgb(89, 89, 92);
-$color-background-trajet-quoti-articles: peru;
-$color-font-quoti: white;
-$color-font-strong-quoti: rgb(73, 64, 64);
-
-$color-background-trajet-nord: rgb(216, 214, 208);
-$color-background-trajet-nord-articles: gray;
-$color-font-nord: rgb(54, 49, 49);
-$color-font-strong-nord: rgb(224, 218, 218);
-
-
-
-/* TRAJET QUOTIDIEN_____________________________________________ */
-/*______________________________________________________________ */
-/*______________________________________________________________ */
-.trajets__principal-section {
-  color: $color-font-quoti;
-  background-color: $color-background-trajet-quoti;
-  padding: 8rem 0 0;
-}
-
-/* ------------------------ */
-.quotidien__presentation {
-  padding: 60px 10px 60px 60px;
-
-  background-color: $color-background-trajet-quoti-articles;
-
-  h2:after {
-    background-color: $color-font-quoti;
-    inset: 130% auto auto 0%;
-  }
-  strong {
-    color: $color-font-strong-quoti;
-  }
-}
-
-/* ------------------------ */
-.quotidien__map {
-  background-color: $color-background-trajet-quoti-articles;
-}
-
-.quotidien__map-fig {
-  top: 10%;
-  left: 7%;
-}
-
-.button0-position {
-  position: absolute;
-  top: 3%;
-  left: 42%;
-}
-.button1-position {
-  position: absolute;
-  top: 52%;
-  left: 78%;
-}
-.button2-position {
-  position: absolute;
-  top: 77%;
-  left: 38%;
-}
-/* ------------------------ */
-.quotidien__around {
-  top: -36%;
-  left: 9%;
-}
-
-/* NORD_________________________________________________________ */
-/*______________________________________________________________ */
-/*______________________________________________________________ */
-.trajets__nord-section {
-  color: $color-font-nord;
-  background-color: $color-background-trajet-nord;
-  padding-top: 8rem;
-}
-/* ------------------------ */
-.nord__presentation {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-
-  padding: 60px 60px 60px 10px;
-  background-color: $color-background-trajet-nord-articles;
-
-  h2:after {
-    inset: 130% auto auto -100%;
-    background-color: $color-font-nord;
-  }
-  strong {
-    color: $color-font-strong-nord;
-  }
-}
-/* ------------------------ */
-.nord__map {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-
-  background-color: $color-background-trajet-nord-articles;
-}
-
-.nord__map-fig {
-  top: 10%;
-  left: 7%;
-}
-
-.button3-position {
-  position: absolute;
-  top: 3%;
-  left: 42%;
-}
-.button4-position {
-  position: absolute;
-  top: 52%;
-  left: 78%;
-}
-.button5-position {
-  position: absolute;
-  top: 77%;
-  left: 38%;
-}
-
-/* ------------------------ */
-.nord__around {
-  grid-column: 2 / 3;
-
-  top: -36%;
-  left: 6%;
-}
-
-/* SUD__________________________________________________________ */
-/*______________________________________________________________ */
-/*______________________________________________________________ */
-.trajets__sud-section {
-  color: $color-font-nord;
-  background-color: $color-background-trajet-nord;
-  padding-top: 2rem;
-}
-/* ------------------------ */
-.sud__presentation {
-  padding: 60px 10px 60px 60px;
-  background-color: $color-background-trajet-nord-articles;
-
-  h2:after {
-    inset: 130% auto auto 0%;
-    background-color: $color-font-nord;
-  }
-  strong {
-    color: $color-font-strong-nord;
-  }
-}
-/* ------------------------ */
-.sud__map {
-  background-color: $color-background-trajet-nord-articles;
-}
-
-.sud__map-fig {
-  top: 10%;
-  left: 7%;
-}
-
-.button6-position {
-  position: absolute;
-  top: 3%;
-  left: 42%;
-}
-.button7-position {
-  position: absolute;
-  top: 52%;
-  left: 78%;
-}
-.button8-position {
-  position: absolute;
-  top: 77%;
-  left: 38%;
-}
-.button9-position {
-  position: absolute;
-  top: 77%;
-  left: 55%;
-}
-
-/* ------------------------ */
-.sud__around {
-  top: -36%;
-  left: 9%;
-}
-
-// MEDIA GENERAL =====================================================================
-// ===================================================================================
-// ===================================================================================
-// ===================================================================================
-$media-trajet-sidetext: 810px;
-$media-large-trajet: 1030px;
-$media-medium-trajet: 700px;
-$media-small-trajet: 460px;
-
-$padding-media-trajets-top: 7rem;
-$padding-media-large-trajets-bottom: 5rem;
-$padding-media-medium-trajets-bottom: 0;
-
-$padding-media-trajets-nord-top: 5rem;
-
-$width-media-large-trajet-map: #{"min(75%, 550px)"};
-$width-media-large-trajet-around: #{"min(65%, 450px)"};
-$width-media-medium-trajet-map: #{"min(90%, 400px)"};
-$width-media-medium-trajet-around: #{"min(85%, 390px)"};
-
-
-
-@media only screen and (max-width: $media-trajet-sidetext) {
-  .trajets__global-presentation {
-    background-color: rgba(0, 0, 0, 0.384);
-    max-width: 100vw;
-    align-items: center;
-    padding: 35% 20% 0;
-    height: min;
-
-    h1 {
-      margin-inline: 0;
-      text-align: center;
-    }
-    p {
-      margin-inline: 0;
-    }
-    a {
-      visibility: hidden;
-    }
-  }
-}
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
 /* _______________________________________________________________ */
 
 @media only screen and (max-width: $media-large-trajet) {
@@ -481,13 +310,73 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
     padding: 35px;
   }
 }
-// ===================================================================================
-// ===================================================================================
-// ===================================================================================
 
-/*  TRAJET QUOTIDIEN_____________________________________________________ */
-/* ____________________________________________________________________ */
-/* ____________________________________________________________________ */
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+
+/* TRAJET QUOTIDIEN_____________________________________________ */
+
+.trajets__principal-section {
+  color: $color-font-quoti;
+  background-color: $color-background-trajet-quoti;
+  padding: $padding-trajet-principal;
+}
+/* ------------------------ */
+.quotidien__presentation {
+  padding: 60px 10px 60px 60px;
+
+  background-color: $color-background-trajet-quoti-articles;
+
+  h2:after {
+    background-color: $color-font-quoti;
+    inset: 130% auto auto 0%;
+  }
+  strong {
+    color: $color-font-strong-quoti;
+  }
+}
+/* ------------------------ */
+.quotidien__map {
+  background-color: $color-background-trajet-quoti-articles;
+}
+
+.quotidien__map-fig {
+  top: 10%;
+  left: 7%;
+}
+/* ------------------------ */
+.button0-position {
+  position: absolute;
+  top: 3%;
+  left: 42%;
+}
+.button1-position {
+  position: absolute;
+  top: 52%;
+  left: 78%;
+}
+.button2-position {
+  position: absolute;
+  top: 77%;
+  left: 38%;
+}
+/* ------------------------ */
+.quotidien__around {
+  top: -36%;
+  left: 9%;
+}
+
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+
 @media only screen and (max-width: $media-large-trajet) {
   .trajets__principal-section {
     padding: $padding-media-trajets-top 0 $padding-media-large-trajets-bottom;
@@ -529,12 +418,81 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
   }
 }
 
-/*  NORD______________________________________________________________ */
-/* ____________________________________________________________________ */
-/* ____________________________________________________________________ */
+/* NORD_________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+.trajets__nord-section {
+  color: $color-font-nord;
+  background-color: $color-background-trajet-nord;
+  padding: $padding-trajet-secondaire;
+  margin: 0 0 -4rem;
+}
+/* ------------------------ */
+.nord__presentation {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  padding: 60px 60px 60px 10px;
+  background-color: $color-background-trajet-nord-articles;
+
+  h2:after {
+    inset: 130% auto auto -80%;
+    background-color: $color-font-nord;
+  }
+  strong {
+    color: $color-font-strong-nord;
+  }
+}
+/* ------------------------ */
+.nord__map {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  background-color: $color-background-trajet-nord-articles;
+}
+
+.nord__map-fig {
+  top: 10%;
+  left: 7%;
+}
+/* ------------------------ */
+.button3-position {
+  position: absolute;
+  top: 3%;
+  left: 42%;
+}
+.button4-position {
+  position: absolute;
+  top: 52%;
+  left: 78%;
+}
+.button5-position {
+  position: absolute;
+  top: 77%;
+  left: 38%;
+}
+/* ------------------------ */
+.nord__around {
+  grid-column: 2 / 3;
+
+  top: -36%;
+  left: 6%;
+}
+
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
 @media only screen and (max-width: $media-large-trajet) {
   .trajets__nord-section {
     padding: $padding-media-trajets-nord-top 0 0;
+    margin: 0 0 -1rem;
   }
 
   .nord__presentation {
@@ -563,7 +521,6 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
 @media only screen and (max-width: $media-medium-trajet) {
   .trajets__nord-section {
     padding: $padding-media-trajets-top 0 0;
-    margin-bottom: -5rem;
   }
 
   .nord__map {
@@ -579,5 +536,93 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
     top: -25%;
     left: 50%;
     transform: translate(-50%, 0%);
+  }
+}
+
+/* SUD__________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+
+.trajets__sud-section {
+  color: $color-font-nord;
+  background-color: $color-background-trajet-nord;
+  padding: $padding-trajet-secondaire;
+}
+/* ------------------------ */
+.sud__presentation {
+  padding: 60px 10px 60px 60px;
+  background-color: $color-background-trajet-nord-articles;
+
+  h2:after {
+    inset: 130% auto auto 0%;
+    background-color: $color-font-nord;
+  }
+  strong {
+    color: $color-font-strong-nord;
+  }
+}
+/* ------------------------ */
+.sud__map {
+  background-color: $color-background-trajet-nord-articles;
+}
+
+.sud__map-fig {
+  top: 10%;
+  left: 7%;
+}
+/* ------------------------ */
+.button6-position {
+  position: absolute;
+  top: 3%;
+  left: 42%;
+}
+.button7-position {
+  position: absolute;
+  top: 45%;
+  left: 78%;
+}
+.button8-position {
+  position: absolute;
+  top: 60%;
+  left: 38%;
+}
+.button9-position {
+  position: absolute;
+  top: 77%;
+  left: 55%;
+}
+/* ------------------------ */
+.sud__around {
+  top: -36%;
+  left: 9%;
+}
+
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+@media only screen and (max-width: $media-large-trajet) {
+  .trajets__sud-section {
+    padding: $padding-media-trajets-top 0 $padding-media-large-trajets-bottom;
+  }
+
+  .sud__map {
+    border-bottom: 50px solid $color-background-trajet-nord-articles;
+  }
+}
+
+@media only screen and (max-width: $media-medium-trajet) {
+  .trajets__sud-section {
+    padding: $padding-media-trajets-sud-top 0 $padding-media-medium-trajets-bottom;
+  }
+
+  .sud__map {
+    border-bottom: 130px solid $color-background-trajet-nord-articles;
   }
 }
