@@ -61,7 +61,6 @@ let loopEffectStart = -1;
 let loopEffectLimit = -1;
 let stop = -1;
 
-
 // FUNCTION : ANNEXE___________________________________________________________________________
 // add & remove button on click effect
 function addAndRemoveEffect(clickedButton, buttonClassToSkip, classToAddAndRemove) {
@@ -96,7 +95,7 @@ function funcPrincipalChange(paramFunc) {
   let whichButton = paramFunc.target;
 
   let buttonNumber = Number(whichButton.classList.value.match(/[0-9]/));
-  let CurrentButtonClass = whichButton.classList.value.split(" ")[1];
+  let whichButtonClass = whichButton.classList.value.split(" ")[1];
 
   if (whichButton.tagName == "BUTTON") {
     //map1
@@ -117,11 +116,10 @@ function funcPrincipalChange(paramFunc) {
       loopEffectStart = 6;
       loopEffectLimit = 9;
     }
-
     // Apply all change
     if (stop != buttonNumber) {
       stop = buttonNumber;
-      addAndRemoveEffect(whichButton, CurrentButtonClass, "button-on-click");
+      addAndRemoveEffect(whichButton, whichButtonClass, "button-on-click");
       fadeInAndOutChangeContent("trajet__article-fade", contentToChangeIndex, buttonNumber, contentToChangeIndex);
     }
   }
