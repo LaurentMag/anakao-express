@@ -90,12 +90,51 @@ function fadeInAndOutChangeContent(fadingClass, eIndexNum, cIndexNum, indexClass
   }, 100);
 }
 
+//___________________________________________________________________________
+
+let mapCheckArray = [-1, -1, -1];
+//___________________________________________________________________________
+
 // FUNCTION : MAIN___________________________________________________________________________
 function funcPrincipalChange(paramFunc) {
   let whichButton = paramFunc.target;
 
   let buttonNumber = Number(whichButton.classList.value.match(/[0-9]/));
   let whichButtonClass = whichButton.classList.value.split(" ")[1];
+
+  //___________________________________________________________________________
+
+  // if (paramFunc.currentTarget == whereToAddListener[0]) {
+  //   console.log("c'est la map 0");
+  // }
+  // if (paramFunc.currentTarget == whereToAddListener[1]) {
+  //   console.log("c'est la map 1");
+  // }
+  // if (paramFunc.currentTarget == whereToAddListener[2]) {
+  //   console.log("c'est la map 2");
+  // }
+
+  // let buttonMap0NodeList = whereToAddListener[0].querySelectorAll(".general__button");
+  // let buttonmap0ToArray = Array.from(buttonMap0NodeList)
+
+  // console.log(Array.from(buttonmap0ToArray));
+
+  if (whichButton.tagName == "BUTTON") {
+    //map1
+    if (buttonNumber >= 0 && buttonNumber <= 2) {
+      mapCheckArray[0] = buttonNumber;
+    }
+    //map2
+    if (buttonNumber >= 3 && buttonNumber <= 5) {
+      mapCheckArray[1] = buttonNumber;
+    }
+    //map3
+    if (buttonNumber >= 6 && buttonNumber <= 9) {
+      mapCheckArray[2] = buttonNumber;
+    }
+  }
+
+  //___________________________________________________________________________
 
   if (whichButton.tagName == "BUTTON") {
     //map1
@@ -123,4 +162,15 @@ function funcPrincipalChange(paramFunc) {
       fadeInAndOutChangeContent("trajet__article-fade", contentToChangeIndex, buttonNumber, contentToChangeIndex);
     }
   }
+
+
+  // console.log(paramFunc.currentTarget);
+  // console.log(whereToAddListener);
+  // console.log(elementToListen);
+  console.log(mapCheckArray);
+  console.log(whichButton);
+  console.log("loop start : " + loopEffectStart);
+  console.log("loop limit : " + loopEffectLimit);
+
+
 }

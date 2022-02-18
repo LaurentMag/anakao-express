@@ -240,76 +240,6 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
   opacity: 0.2;
 }
 
-/* _______________________________________________________________ */
-/* _______________________________________________________________ */
-/* _______________________________________________________________ */
-/* _______________________________________________________________ */
-
-@media only screen and (max-width: $media-large-trajet) {
-  .trajets__grid-container {
-    width: 63%;
-  }
-  .trajets__grid {
-    @include grid-column(1fr);
-    justify-content: center;
-    position: relative;
-  }
-  /* ------------ */
-  .trajets__presentation {
-    padding: 60px 60px 40px 60px;
-
-    h2:after {
-      inset: 130% auto auto 0%;
-      width: 100%;
-    }
-  }
-  /* ------------ */
-  .trajets__map-and-button {
-    height: max-content;
-  }
-  .trajets__map-fig {
-    width: $width-media-large-trajet-map;
-  }
-  /* ------------ */
-  .trajets__around-article {
-    position: absolute;
-    width: $width-media-large-trajet-around;
-
-    figure {
-      img {
-        aspect-ratio: 1 / 1.1;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: $media-medium-trajet) {
-  .trajets__grid-container {
-    width: #{"min(90%, 30rem)"};
-  }
-  .trajets__grid {
-    @include grid-column(1fr);
-  }
-  /* ------------ */
-  .trajets__map-and-button {
-    border-bottom: 130px solid $color-background-trajet-quoti-articles;
-  }
-
-  .trajets__map-fig {
-    width: $width-media-medium-trajet-map;
-  }
-
-  .trajets__around-article {
-    position: relative;
-    width: $width-media-medium-trajet-around;
-  }
-}
-
-@media only screen and (max-width: $media-small-trajet) {
-  .trajets__presentation {
-    padding: 35px;
-  }
-}
 
 // ========================================================================================
 // ========================================================================================
@@ -372,51 +302,6 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
   left: 9%;
 }
 
-/* _______________________________________________________________ */
-/* _______________________________________________________________ */
-/* _______________________________________________________________ */
-/* _______________________________________________________________ */
-
-@media only screen and (max-width: $media-large-trajet) {
-  .trajets__principal-section {
-    padding: $padding-media-trajets-top 0 $padding-media-large-trajets-bottom;
-  }
-
-  .quotidien__map {
-    border-bottom: 50px solid $color-background-trajet-quoti-articles;
-  }
-  .quotidien__map-fig {
-    top: 0;
-    left: 46%;
-  }
-  /* ------------ */
-  .quotidien__around {
-    grid-row: 2 / 3;
-    top: 15%;
-    left: -23%;
-  }
-}
-
-@media only screen and (max-width: $media-medium-trajet) {
-  .trajets__principal-section {
-    padding: $padding-media-trajets-top 0 $padding-media-medium-trajets-bottom;
-  }
-
-  .quotidien__map {
-    border-bottom: 130px solid $color-background-trajet-quoti-articles;
-  }
-  .quotidien__map-fig {
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-  }
-  .quotidien__around {
-    grid-row: 3 / 4;
-    top: -25%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-  }
-}
 
 /* NORD_________________________________________________________ */
 /*______________________________________________________________ */
@@ -485,59 +370,6 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
   left: 6%;
 }
 
-/* _______________________________________________________________ */
-/* _______________________________________________________________ */
-/* _______________________________________________________________ */
-/* _______________________________________________________________ */
-@media only screen and (max-width: $media-large-trajet) {
-  .trajets__nord-section {
-    padding: $padding-media-trajets-nord-top 0 0;
-    margin: 0 0 -1rem;
-  }
-
-  .nord__presentation {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-  /* ------------ */
-  .nord__map {
-    border-bottom: 50px solid $color-background-trajet-nord-articles;
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
-  .nord__map-fig {
-    top: 0;
-    left: -22%;
-  }
-  /* ------------ */
-  .nord__around {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    top: 15%;
-    left: 57%;
-  }
-}
-
-@media only screen and (max-width: $media-medium-trajet) {
-  .trajets__nord-section {
-    padding: $padding-media-trajets-top 0 0;
-  }
-
-  .nord__map {
-    border-bottom: 130px solid $color-background-trajet-nord-articles;
-  }
-  .nord__map-fig {
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-  }
-  .nord__around {
-    grid-row: 3 / 4;
-    top: -25%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-  }
-}
 
 /* SUD__________________________________________________________ */
 /*______________________________________________________________ */
@@ -603,6 +435,180 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
   left: 9%;
 }
 
+// MEDIA ==================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+/* GENERAL________________________________________________________ */
+@media only screen and (max-width: $media-large-trajet) {
+  .trajets__grid-container {
+    width: 63%;
+  }
+  .trajets__grid {
+    @include grid-column(1fr);
+    justify-content: center;
+    position: relative;
+  }
+  /* ------------ */
+  .trajets__presentation {
+    padding: 60px 60px 40px;
+
+    h2:after {
+      inset: 130% auto auto 0%;
+      width: 100%;
+    }
+  }
+  /* ------------ */
+  .trajets__map-and-button {
+    height: max-content;
+  }
+  .trajets__map-fig {
+    width: $width-media-large-trajet-map;
+  }
+  /* ------------ */
+  .trajets__around-article {
+    position: absolute;
+    width: $width-media-large-trajet-around;
+
+    figure {
+      img {
+        aspect-ratio: 1 / 1.1;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $media-medium-trajet) {
+  .trajets__grid-container {
+    width: #{"min(90%, 30rem)"};
+  }
+  .trajets__grid {
+    @include grid-column(1fr);
+  }
+  /* ------------ */
+  .trajets__map-and-button {
+    border-bottom: 130px solid $color-background-trajet-quoti-articles;
+  }
+
+  .trajets__map-fig {
+    width: $width-media-medium-trajet-map;
+  }
+
+  .trajets__around-article {
+    position: relative;
+    width: $width-media-medium-trajet-around;
+  }
+}
+
+@media only screen and (max-width: $media-small-trajet) {
+  .trajets__presentation {
+    padding: 35px;
+  }
+}
+
+/* QUOTIDIEN______________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+
+@media only screen and (max-width: $media-large-trajet) {
+  .trajets__principal-section {
+    padding: $padding-media-trajets-top 0 $padding-media-large-trajets-bottom;
+  }
+
+  .quotidien__map {
+    border-bottom: 50px solid $color-background-trajet-quoti-articles;
+  }
+  .quotidien__map-fig {
+    top: 0;
+    left: 46%;
+  }
+  /* ------------ */
+  .quotidien__around {
+    grid-row: 2 / 3;
+    top: 15%;
+    left: -23%;
+  }
+}
+
+@media only screen and (max-width: $media-medium-trajet) {
+  .trajets__principal-section {
+    padding: $padding-media-trajets-top 0 $padding-media-medium-trajets-bottom;
+  }
+
+  .quotidien__map {
+    border-bottom: 130px solid $color-background-trajet-quoti-articles;
+  }
+  .quotidien__map-fig {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  .quotidien__around {
+    grid-row: 3 / 4;
+    top: -25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
+/* NORD___________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+
+@media only screen and (max-width: $media-large-trajet) {
+  .trajets__nord-section {
+    padding: $padding-media-trajets-nord-top 0 0;
+    margin: 0 0 -1rem;
+  }
+
+  .nord__presentation {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  /* ------------ */
+  .nord__map {
+    border-bottom: 50px solid $color-background-trajet-nord-articles;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .nord__map-fig {
+    top: 0;
+    left: -22%;
+  }
+  /* ------------ */
+  .nord__around {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    top: 15%;
+    left: 57%;
+  }
+}
+
+@media only screen and (max-width: $media-medium-trajet) {
+  .trajets__nord-section {
+    padding: $padding-media-trajets-top 0 0;
+  }
+
+  .nord__map {
+    border-bottom: 130px solid $color-background-trajet-nord-articles;
+  }
+  .nord__map-fig {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  .nord__around {
+    grid-row: 3 / 4;
+    top: -25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
+
+/* SUD____________________________________________________________ */
 /* _______________________________________________________________ */
 /* _______________________________________________________________ */
 /* _______________________________________________________________ */
