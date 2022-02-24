@@ -1,0 +1,590 @@
+// PARALLAX ========================================================================================
+// =================================================================================================
+.trajets__body {
+  overflow: hidden;
+  color: black;
+}
+
+.trajets__parallax__container {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 10px;
+
+  .trajets__parallax__group {
+    position: relative;
+    transform-style: preserve-3d;
+    width: 100vw;
+    z-index: -1;
+  }
+}
+.trajets__parallax__group::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/trajets/temp_1-nosy-be-madagascar-timbuktu-travel-2.avif");
+  background-size: cover;
+  background-position: 50% 40%;
+  transform: translateZ(-7px) scale(1.8);
+  min-height: 100vh;
+}
+
+// Side text ----------------------------------------------------------------
+.trajets__global-presentation {
+  position: relative;
+  @include flex-modulable(column, center, null, 5rem);
+  top: 0;
+  padding: 11% 3rem 11%;
+  max-width: 25rem;
+
+  color: white;
+  background-color: rgba(40, 39, 43, 0.61);
+
+  h1 {
+    font-size: 4em;
+    margin-inline: 2rem 0;
+    text-shadow: $shadow-box-text;
+  }
+  p {
+    flex-basis: 18em;
+    margin-inline: 1rem 0;
+    font-family: $font-titre-montserrat;
+  }
+  a {
+    align-self: center;
+    padding: 0.8rem;
+    font-family: $font-titre-montserrat;
+    font-size: 1.5em;
+    border: 1px solid white;
+    box-shadow: $shadow-box-text;
+    // display: none;
+  }
+}
+
+$media-trajet-sidetext: 810px;
+
+@media only screen and (max-width: $media-trajet-sidetext) {
+  .trajets__global-presentation {
+    background-color: rgba(0, 0, 0, 0.384);
+    max-width: 100vw;
+    align-items: center;
+    padding: 35% 20% 0;
+    height: min;
+
+    h1 {
+      margin-inline: 0;
+      text-align: center;
+    }
+    p {
+      margin-inline: 0;
+    }
+    a {
+      visibility: hidden;
+    }
+  }
+}
+
+// GENERAL SETTINGS =======================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+
+.trajets__grid-container {
+  margin-inline: auto;
+  width: #{"min(95%, 80rem)"};
+}
+.trajets__grid {
+  @include grid-column(repeat(2, 1fr));
+}
+
+/*  TRAJETS DESCRIPTIF_________________________________ */
+.trajets__presentation {
+  @include flex-modulable(column, start, null, 1.5rem);
+  box-shadow: $shadow-box-text;
+
+  h2 {
+    position: relative;
+    font-size: calc(#{$font-size-h2} * #{$font-size-multiplier-h2});
+  }
+  h2:after {
+    position: absolute;
+    content: "";
+
+    width: 150%;
+    height: 3px;
+    z-index: 1;
+  }
+
+  span {
+    font-size: calc(#{$font-size-p} * #{$font-size-multiplier-span});
+  }
+  strong {
+    font-family: $font-titre-montserrat;
+    font-size: calc(#{$font-size-p} * #{$font-size-multiplier-p});
+    font-weight: bold;
+  }
+  p:nth-of-type(1) {
+    padding-top: 0.8rem;
+  }
+  p:nth-of-type(2) {
+    flex-basis: 12rem;
+  }
+}
+
+/*  MAP_________________________________ */
+.trajets__map-and-button {
+  height: 600px;
+}
+.trajets__map-fig {
+  position: relative;
+
+  width: $width-trajet-map;
+  z-index: 2;
+
+  img {
+    aspect-ratio: 1 / 1.4;
+
+    border-radius: $border-radius-trajet;
+    box-shadow: $shadow-box-text-larger;
+  }
+}
+
+/* ARTICLE PHOTO & TXT____________________ */
+.trajets__around-article {
+  display: grid;
+  position: relative;
+
+  width: $width-trajet-around-article;
+
+  border-radius: $border-radius-trajet;
+  box-shadow: $shadow-box-text-larger;
+
+  transition: opacity 0.15s;
+  opacity: 1;
+
+  > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  figure {
+    img {
+      aspect-ratio: 1.6 / 1;
+      border-radius: $border-radius-trajet;
+    }
+  }
+}
+
+.around-text-container {
+  display: grid;
+  margin-bottom: 1%;
+  h2 {
+    padding: 1rem 3rem;
+  }
+  p {
+    align-self: end;
+
+    padding: 0 2rem 1rem;
+    font-size: calc(#{$font-size-p} * $font-size-multiplier-p);
+  }
+}
+
+/* FOR JS___________________________ */
+.trajet__article-fade {
+  opacity: 0.2;
+}
+
+
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+
+/* TRAJET QUOTIDIEN_____________________________________________ */
+
+.trajets__principal-section {
+  color: $color-font-quoti;
+  background-color: $color-background-trajet-quoti;
+  padding: $padding-trajet-principal;
+}
+/* ------------------------ */
+.quotidien__presentation {
+  padding: 60px 10px 60px 60px;
+
+  background-color: $color-background-trajet-quoti-articles;
+
+  h2:after {
+    background-color: $color-font-quoti;
+    inset: 130% auto auto 0%;
+  }
+  strong {
+    color: $color-font-strong-quoti;
+  }
+}
+/* ------------------------ */
+.quotidien__map {
+  background-color: $color-background-trajet-quoti-articles;
+}
+
+.quotidien__map-fig {
+  top: 10%;
+  left: 7%;
+}
+/* ------------------------ */
+.button0-position {
+  position: absolute;
+  top: 3%;
+  left: 42%;
+}
+.button1-position {
+  position: absolute;
+  top: 52%;
+  left: 78%;
+}
+.button2-position {
+  position: absolute;
+  top: 77%;
+  left: 38%;
+}
+/* ------------------------ */
+.quotidien__around {
+  top: -36%;
+  left: 9%;
+}
+
+/* NORD_________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+.trajets__nord-section {
+  color: $color-font-nord;
+  background-color: $color-background-trajet-nord;
+  padding: $padding-trajet-secondaire;
+  margin: 0 0 -4rem;
+}
+/* ------------------------ */
+.nord__presentation {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  padding: 60px 60px 60px 10px;
+  background-color: $color-background-trajet-nord-articles;
+
+  h2:after {
+    inset: 130% auto auto -80%;
+    background-color: $color-font-nord;
+  }
+  strong {
+    color: $color-font-strong-nord;
+  }
+}
+/* ------------------------ */
+.nord__map {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  background-color: $color-background-trajet-nord-articles;
+}
+
+.nord__map-fig {
+  top: 10%;
+  left: 7%;
+}
+/* ------------------------ */
+.button3-position {
+  position: absolute;
+  top: 3%;
+  left: 42%;
+}
+.button4-position {
+  position: absolute;
+  top: 52%;
+  left: 78%;
+}
+.button5-position {
+  position: absolute;
+  top: 77%;
+  left: 38%;
+}
+/* ------------------------ */
+.nord__around {
+  grid-column: 2 / 3;
+
+  top: -36%;
+  left: 6%;
+}
+
+
+/* SUD__________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+/*______________________________________________________________ */
+
+.trajets__sud-section {
+  color: $color-font-nord;
+  background-color: $color-background-trajet-nord;
+  padding: $padding-trajet-secondaire;
+}
+/* ------------------------ */
+.sud__presentation {
+  padding: 60px 10px 60px 60px;
+  background-color: $color-background-trajet-nord-articles;
+
+  h2:after {
+    inset: 130% auto auto 0%;
+    background-color: $color-font-nord;
+  }
+  strong {
+    color: $color-font-strong-nord;
+  }
+}
+/* ------------------------ */
+.sud__map {
+  background-color: $color-background-trajet-nord-articles;
+}
+
+.sud__map-fig {
+  top: 10%;
+  left: 7%;
+}
+/* ------------------------ */
+.button6-position {
+  position: absolute;
+  top: 3%;
+  left: 42%;
+}
+.button7-position {
+  position: absolute;
+  top: 45%;
+  left: 78%;
+}
+.button8-position {
+  position: absolute;
+  top: 60%;
+  left: 38%;
+}
+.button9-position {
+  position: absolute;
+  top: 77%;
+  left: 55%;
+}
+/* ------------------------ */
+.sud__around {
+  top: -36%;
+  left: 9%;
+}
+
+// MEDIA ==================================================================================
+// ========================================================================================
+// ========================================================================================
+// ========================================================================================
+/* GENERAL________________________________________________________ */
+@media only screen and (max-width: $media-large-trajet) {
+  .trajets__grid-container {
+    width: 63%;
+  }
+  .trajets__grid {
+    @include grid-column(1fr);
+    justify-content: center;
+    position: relative;
+  }
+  /* ------------ */
+  .trajets__presentation {
+    padding: 60px 60px 40px;
+
+    h2:after {
+      inset: 130% auto auto 0%;
+      width: 100%;
+    }
+  }
+  /* ------------ */
+  .trajets__map-and-button {
+    height: max-content;
+  }
+  .trajets__map-fig {
+    width: $width-media-large-trajet-map;
+  }
+  /* ------------ */
+  .trajets__around-article {
+    position: absolute;
+    width: $width-media-large-trajet-around;
+
+    figure {
+      img {
+        aspect-ratio: 1 / 1.1;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $media-medium-trajet) {
+  .trajets__grid-container {
+    width: #{"min(90%, 30rem)"};
+  }
+  .trajets__grid {
+    @include grid-column(1fr);
+  }
+  /* ------------ */
+  .trajets__map-and-button {
+    border-bottom: 130px solid $color-background-trajet-quoti-articles;
+  }
+
+  .trajets__map-fig {
+    width: $width-media-medium-trajet-map;
+  }
+
+  .trajets__around-article {
+    position: relative;
+    width: $width-media-medium-trajet-around;
+  }
+}
+
+@media only screen and (max-width: $media-small-trajet) {
+  .trajets__presentation {
+    padding: 35px;
+  }
+}
+
+/* QUOTIDIEN______________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+
+@media only screen and (max-width: $media-large-trajet) {
+  .trajets__principal-section {
+    padding: $padding-media-trajets-top 0 $padding-media-large-trajets-bottom;
+  }
+
+  .quotidien__map {
+    border-bottom: 50px solid $color-background-trajet-quoti-articles;
+  }
+  .quotidien__map-fig {
+    top: 0;
+    left: 46%;
+  }
+  /* ------------ */
+  .quotidien__around {
+    grid-row: 2 / 3;
+    top: 15%;
+    left: -23%;
+  }
+}
+
+@media only screen and (max-width: $media-medium-trajet) {
+  .trajets__principal-section {
+    padding: $padding-media-trajets-top 0 $padding-media-medium-trajets-bottom;
+  }
+
+  .quotidien__map {
+    border-bottom: 130px solid $color-background-trajet-quoti-articles;
+  }
+  .quotidien__map-fig {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  .quotidien__around {
+    grid-row: 3 / 4;
+    top: -25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
+/* NORD___________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+
+@media only screen and (max-width: $media-large-trajet) {
+  .trajets__nord-section {
+    padding: $padding-media-trajets-nord-top 0 0;
+    margin: 0 0 -1rem;
+  }
+
+  .nord__presentation {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  /* ------------ */
+  .nord__map {
+    border-bottom: 50px solid $color-background-trajet-nord-articles;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .nord__map-fig {
+    top: 0;
+    left: -22%;
+  }
+  /* ------------ */
+  .nord__around {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    top: 15%;
+    left: 57%;
+  }
+}
+
+@media only screen and (max-width: $media-medium-trajet) {
+  .trajets__nord-section {
+    padding: $padding-media-trajets-top 0 0;
+  }
+
+  .nord__map {
+    border-bottom: 130px solid $color-background-trajet-nord-articles;
+  }
+  .nord__map-fig {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  .nord__around {
+    grid-row: 3 / 4;
+    top: -25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
+
+/* SUD____________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+/* _______________________________________________________________ */
+@media only screen and (max-width: $media-large-trajet) {
+  .trajets__sud-section {
+    padding: $padding-media-trajets-top 0 $padding-media-large-trajets-bottom;
+  }
+
+  .sud__map {
+    border-bottom: 50px solid $color-background-trajet-nord-articles;
+  }
+}
+
+@media only screen and (max-width: $media-medium-trajet) {
+  .trajets__sud-section {
+    padding: $padding-media-trajets-sud-top 0 $padding-media-medium-trajets-bottom;
+  }
+
+  .sud__map {
+    border-bottom: 130px solid $color-background-trajet-nord-articles;
+  }
+}

@@ -1,0 +1,107 @@
+footer{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: $color-bg-articles;
+    color:$font-color-sidebar;
+    font-size: 1rem;
+    font-family: $font-titre-montserrat;
+    padding:70px;
+    @media (max-width:870px) {
+    flex-direction: column;
+    align-items: center;
+    }
+    .adress, .summary, .useful_links{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 200px;
+        @media (max-width:870px) {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #fdfedb;
+            padding:30px;
+            flex-basis: 300px;
+            align-self:stretch;
+            &:last-child{
+                border:none;
+            }
+            }
+        li{
+            margin-bottom: 15px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+           
+
+        }
+        a{
+            
+            display:block;
+            &:hover{
+                color:#fdfedb;
+
+            }
+        }
+    }
+    .adress{
+        min-width: 270px;
+        li{
+            &:first-child{
+                font-weight: 900;
+                font-size: 1.5rem;
+        
+            }
+            &:nth-child(5){
+                width:90px;
+               
+            }
+        }
+    }
+    .summary{
+        li{
+            &:first-child{
+                font-weight: 900;
+                font-size: 1.5rem;
+            }
+            a{
+                &::before{
+                    font-family: FontAwesome;
+                    content:"\f054";
+                    float:right;
+                    display:block;
+                }
+                &:hover{
+                    color:rgba($font-color-sidebar, 0.5);
+                }
+                
+            }
+        }
+    }
+    .useful_links{
+        li{
+            &:first-child{
+                font-weight: 900;
+                font-size: 1.5rem;
+            }
+            &:last-child{
+                width:30px;
+            }
+            &:nth-child(2){
+                &::before{
+                    font-family: FontAwesome;
+                    content:"\f054";
+                    float:right;
+                    display:block;
+                }
+            }
+            &:nth-child(3){
+                &::before{
+                    font-family: FontAwesome;
+                    content:"\f054";
+                    float:right;
+                    display:block;
+                }
+            }
+        }
+    }
+}

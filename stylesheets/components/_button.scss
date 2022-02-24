@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+// BUTTONS TRAJETS ----------------------------------------------------------------
+  .general__button {
+    @include flex-modulable(null, center, center);
+
+    width: $size-side;
+    height: $size-side;
+    padding: $size-padding;
+    border-radius: 50%;
+  
+    background-clip: padding-box;
+  
+    background-color: $color-background;
+    border: $size-border-shadow solid $color-border-box;
+    box-shadow: 0 0 0 0 $color-transparent-border-box;
+  
+    cursor: pointer;
+    transition: $transition-time ease-in-out;
+  }
+  
+  .general__button:hover {
+    background-color: rgb(172, 112, 52);
+  }
+  
+  /*  FOR JS */
+  .button-effect-on-click {
+    background-color: $color-background-hover;
+    border: $size-border-shadow solid $color-transparent-border-box;
+    box-shadow: 0 0 0 $size-border-shadow $color-border-box;
+  }
+
+
+// BUTTONS FOR JS TEST ----------------------------------------------------------------
+  .ButtonFixed {
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    height: 6rem;
+    width: 6rem;
+    border: 10px solid rgb(86, 41, 170);
+  }
+  
+  .button2 {
+    top: 70%;
+    left: 50%;
+  }
+  

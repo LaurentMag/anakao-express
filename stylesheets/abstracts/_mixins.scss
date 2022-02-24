@@ -1,0 +1,102 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Kitty Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+// ----------------------------------------------------------------------
+@mixin transparency-effect {
+  position: absolute;
+  top: 65vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40vw;
+  height: 20vh;
+  line-height: 20vh;
+  font-family: $font-titre-montserrat;
+  font-size: 2rem;
+  color: white;
+  padding-left: 6vw;
+  &::after {
+    content: "";
+    width: 20vw;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    top: 13vh;
+    left: 6vw;
+  }
+}
+// ----------------------------------------------------------------------
+// source stack overflow
+@mixin text-outline-shadow($size: 1px, $color: #000) {
+  text-shadow:
+    -#{$size} -#{$size} 0 $color,
+     0        -#{$size} 0 $color,
+     #{$size} -#{$size} 0 $color,
+     #{$size}  0        0 $color,
+     #{$size}  #{$size} 0 $color,
+     0         #{$size} 0 $color,
+    -#{$size}  #{$size} 0 $color,
+    -#{$size}  0        0 $color;
+}
+// ----------------------------------------------------------------------
+
+/* GRIDS */
+@mixin grid-column($value, $column-gap: null, $row-gap: null) {
+  display: grid;
+  grid-template-columns: $value;
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+  @content;
+}
+
+/* FLEX */
+@mixin flex-modulable($direction: null, $justify: null, $align: null, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+
+/* Depreciated */
+@mixin grid-column-repeat($repeatvalue, $min, $max, $column-gap: null, $row-gap: null) {
+  display: grid;
+  grid-template-columns: repeat($repeatvalue, minmax($min, $max));
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+  @content;
+}
+
+
+
+

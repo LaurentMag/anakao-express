@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    "robots.txt": true,
+    "site.webmanifest": true,
+    "package.json": true,
+    "package-lock.json": true,
+    "LICENSE.txt": true,
+    "humans.txt": true,
+    "favicon.ico": true,
+    "browserconfig.xml": true
+  },
+  "liveServer.settings.port": 5502
+}

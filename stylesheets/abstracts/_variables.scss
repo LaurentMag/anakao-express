@@ -1,0 +1,144 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  "small": 320px,
+  "medium": 768px,
+  "large": 1024px,
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: "/assets/" !default;
+
+//------------------------------------------------------------------------------------------------
+$font-navbar-cinzel: "Cinzel", serif;
+$font-titre-montserrat: "Montserrat", sans-serif;
+$font-p: "Playfair Display", serif;
+
+//------------------------------------------------
+$font-size-navbar: 1.5em;
+$font-size-h1: 3em;
+$font-size-h2: 2.1em;
+$font-size-p: 1.4em;
+
+//------------------------------------------------
+$letter-spacing-navbar: 0.07em;
+$letter-spacing-h1: 0.05em;
+
+//------------------------------------------------
+$line-height-p: 1.9;
+
+//------------------------------------------------
+
+$margin-navbar-top-down: 0.5rem;
+$margin-navbar-left-right: 6rem;
+$margin-article: 2rem;
+$margin-p: 1rem;
+
+//------------------------------------------------
+$font-color-sidebar: #fdfedb;
+$font-color-small-text: #747474;
+$color-bg-articles: #222222;
+$color-dark-drey: rgb(41, 41, 41);
+
+//------------------------------------------------
+
+$shadow-color: rgba(61, 56, 56, 0.185);
+$shadow-color-larger: rgba(61, 56, 56, 0.192);
+$shadow-color-darker: rgba(107, 98, 98, 0.884);
+
+$shadow-box-text: 2px 4px 15px #{$shadow-color}, -2px 0 15px #{$shadow-color};
+$shadow-box-text-larger: 3px 4px 20px #{$shadow-color-larger}, -3px 0 20px #{$shadow-color-larger};
+$shadow-box-text-darker: 4px 4px 10px #{$shadow-color-darker}, -4px 0px 10px #{$shadow-color-darker};
+
+//------------------------------------------------
+// Buttons trajets
+$size-side: 1px;
+$size-padding: 0.4rem;
+$size-border-shadow: 15px;
+$color-background: rgb(0, 0, 0);
+$color-background-hover: peru;
+$color-border-box: rgba(151, 145, 140, 0.699);
+$color-transparent-border-box: rgba(0, 0, 0, 0);
+$transition-time: 0.4s;
+
+//------------------------------------------------
+// trajets
+$border-radius-trajet: 0.25rem;
+$font-size-multiplier-h2: 1.5;
+$font-size-multiplier-p: 1.05;
+$font-size-multiplier-span: 0.85;
+
+$width-trajet-map: #{"min(90%, 540px)"};
+$width-trajet-around-article: #{"min(85%, 530px)"};
+
+$color-background-trajet-quoti: rgb(89, 89, 92);
+$color-background-trajet-quoti-articles: peru;
+$color-font-quoti: white;
+$color-font-strong-quoti: rgb(73, 64, 64);
+
+$color-background-trajet-nord: rgb(216, 214, 208);
+$color-background-trajet-nord-articles: gray;
+$color-font-nord: rgb(54, 49, 49);
+$color-font-strong-nord: rgb(224, 218, 218);
+
+$padding-trajet-principal: 8rem 0 0;
+$padding-trajet-secondaire: 6rem 0 0;
+
+/* _______________________ */
+// media trajets
+
+$media-large-trajet: 1030px;
+$media-medium-trajet: 700px;
+$media-small-trajet: 460px;
+
+$padding-media-trajets-top: 7rem;
+$padding-media-large-trajets-bottom: 5rem;
+$padding-media-medium-trajets-bottom: 0;
+
+$padding-media-trajets-nord-top: 5rem;
+$padding-media-trajets-sud-top: 0;
+
+$width-media-large-trajet-map: #{"min(75%, 550px)"};
+$width-media-large-trajet-around: #{"min(65%, 450px)"};
+$width-media-medium-trajet-map: #{"min(90%, 400px)"};
+$width-media-medium-trajet-around: #{"min(85%, 390px)"};
