@@ -84,49 +84,6 @@ $media-trajet-sidetext: 810px;
   }
 }
 
-// LES TRAJETS ============================================================================
-// ========================================================================================
-
-$border-radius-trajet: 0.25rem;
-$font-size-multiplier-h2: 1.5;
-$font-size-multiplier-p: 1.05;
-$font-size-multiplier-span: 0.85;
-
-$width-trajet-map: #{"min(90%, 540px)"};
-$width-trajet-around-article: #{"min(85%, 530px)"};
-
-$color-background-trajet-quoti: rgb(89, 89, 92);
-$color-background-trajet-quoti-articles: peru;
-$color-font-quoti: white;
-$color-font-strong-quoti: rgb(73, 64, 64);
-
-$color-background-trajet-nord: rgb(216, 214, 208);
-$color-background-trajet-nord-articles: gray;
-$color-font-nord: rgb(54, 49, 49);
-$color-font-strong-nord: rgb(224, 218, 218);
-
-$padding-trajet-principal: 8rem 0 0;
-$padding-trajet-secondaire: 6rem 0 0;
-
-/* _______________________ */
-
-$media-large-trajet: 1030px;
-$media-medium-trajet: 700px;
-$media-small-trajet: 460px;
-
-$padding-media-trajets-top: 7rem;
-$padding-media-large-trajets-bottom: 5rem;
-$padding-media-medium-trajets-bottom: 0;
-
-$padding-media-trajets-nord-top: 5rem;
-$padding-media-trajets-sud-top: 0;
-
-$width-media-large-trajet-map: #{"min(75%, 550px)"};
-$width-media-large-trajet-around: #{"min(65%, 450px)"};
-$width-media-medium-trajet-map: #{"min(90%, 400px)"};
-$width-media-medium-trajet-around: #{"min(85%, 390px)"};
-
-
 // GENERAL SETTINGS =======================================================================
 // ========================================================================================
 // ========================================================================================
@@ -301,7 +258,6 @@ $width-media-medium-trajet-around: #{"min(85%, 390px)"};
   top: -36%;
   left: 9%;
 }
-
 
 /* NORD_________________________________________________________ */
 /*______________________________________________________________ */
