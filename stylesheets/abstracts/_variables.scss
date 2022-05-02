@@ -4,7 +4,8 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$text-font-stack: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
+  sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
@@ -58,7 +59,7 @@ $font-p: "Playfair Display", serif;
 $font-size-navbar: 1.5em;
 $font-size-h1: 3em;
 $font-size-h2: 2.1em;
-$font-size-p: 1.4em;
+$font-size-p: 1.5em;
 
 //------------------------------------------------
 $letter-spacing-navbar: 0.07em;

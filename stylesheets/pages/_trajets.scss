@@ -103,7 +103,7 @@ $media-trajet-sidetext: 810px;
 
 /*  TRAJETS DESCRIPTIF_________________________________ */
 .trajets__presentation {
-  @include flex-modulable(column, start, null, 1.5rem);
+  @include flex-modulable(column, start, null, 1.1rem);
   box-shadow: $shadow-box-text;
 
   h2 {
@@ -131,7 +131,8 @@ $media-trajet-sidetext: 810px;
     padding-top: 0.8rem;
   }
   p:nth-of-type(2) {
-    flex-basis: 12rem;
+    flex-basis: 15rem;
+    overflow-y: scroll;
   }
 }
 
@@ -178,9 +179,16 @@ $media-trajet-sidetext: 810px;
   }
 }
 
+$text-shadow-color: rgba(66, 63, 63, 0.571);
+
 .around-text-container {
   display: grid;
   margin-bottom: 1%;
+
+  text-shadow: 2px 2px 0 $text-shadow-color, -2px -2px 0 $text-shadow-color,
+    2px -2px 0 $text-shadow-color, -2px 2px 0 $text-shadow-color, 0 2px 0 $text-shadow-color,
+    2px 0 0 $text-shadow-color, 0 -2px 0 $text-shadow-color, -2px 0 0 $text-shadow-color,
+    2px 2px 5px $text-shadow-color;
   h2 {
     padding: 1rem 3rem;
   }
@@ -196,7 +204,6 @@ $media-trajet-sidetext: 810px;
 .trajet__article-fade {
   opacity: 0.2;
 }
-
 
 // ========================================================================================
 // ========================================================================================
@@ -269,7 +276,9 @@ $media-trajet-sidetext: 810px;
 /*______________________________________________________________ */
 /*______________________________________________________________ */
 .trajets__nord-section {
-  color: $color-font-nord;
+  // color: $color-font-nord;
+  color: $color-font-quoti;
+
   background-color: $color-background-trajet-nord;
   padding: $padding-trajet-secondaire;
   margin: 0 0 -4rem;
@@ -287,7 +296,8 @@ $media-trajet-sidetext: 810px;
     background-color: $color-font-nord;
   }
   strong {
-    color: $color-font-strong-nord;
+    // color: $color-font-strong-nord;
+    color: $color-font-strong-quoti;
   }
 }
 /* ------------------------ */
@@ -306,17 +316,17 @@ $media-trajet-sidetext: 810px;
 .button3-position {
   position: absolute;
   top: 3%;
-  left: 42%;
+  left: 25%;
 }
 .button4-position {
   position: absolute;
-  top: 52%;
-  left: 78%;
+  top: 39%;
+  left: 29%;
 }
 .button5-position {
   position: absolute;
-  top: 77%;
-  left: 38%;
+  top: 75%;
+  left: 56%;
 }
 /* ------------------------ */
 .nord__around {
@@ -325,7 +335,6 @@ $media-trajet-sidetext: 810px;
   top: -36%;
   left: 6%;
 }
-
 
 /* SUD__________________________________________________________ */
 /*______________________________________________________________ */
@@ -338,7 +347,8 @@ $media-trajet-sidetext: 810px;
 /*______________________________________________________________ */
 
 .trajets__sud-section {
-  color: $color-font-nord;
+  // color: $color-font-nord;
+  color: $color-font-quoti;
   background-color: $color-background-trajet-nord;
   padding: $padding-trajet-secondaire;
 }
@@ -352,7 +362,16 @@ $media-trajet-sidetext: 810px;
     background-color: $color-font-nord;
   }
   strong {
-    color: $color-font-strong-nord;
+    // color: $color-font-strong-nord;
+    color: $color-font-strong-quoti;
+  }
+
+  p:nth-of-type(1) {
+    padding-block-start: 0.6rem;
+    line-height: 2rem;
+  }
+  p:nth-of-type(2) {
+    flex-basis: 14.5rem;
   }
 }
 /* ------------------------ */
@@ -367,23 +386,23 @@ $media-trajet-sidetext: 810px;
 /* ------------------------ */
 .button6-position {
   position: absolute;
-  top: 3%;
-  left: 42%;
+  top: 55%;
+  left: 38%;
 }
 .button7-position {
   position: absolute;
-  top: 45%;
-  left: 78%;
+  top: 65%;
+  left: 58%;
 }
 .button8-position {
   position: absolute;
-  top: 60%;
-  left: 38%;
+  top: 10%;
+  left: 26%;
 }
 .button9-position {
   position: absolute;
-  top: 77%;
-  left: 55%;
+  top: 18%;
+  left: 30%;
 }
 /* ------------------------ */
 .sud__around {
